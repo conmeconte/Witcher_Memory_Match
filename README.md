@@ -29,7 +29,7 @@
     - Pull request should be made from v0.5 to **your repository's** master branch
     - Receive Peer review on your pull request (Wait for Instruction)
         - Reviewer should merge pull request through Github UI once all comments have been resolved
-> - Once Peer Review is complete & auto merge happens through Github UI
+> - **Once Peer Review is complete & auto merge happens through Github UI**
     - Switch to master branch locally
         - `git checkout master`
     - Pull latest merged code
