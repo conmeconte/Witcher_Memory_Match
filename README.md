@@ -16,6 +16,8 @@
 > - If you haven't already started the v0.1 start there - <a href="https://github.com/Learning-Fuze/memory_match/tree/v0.1#getting-started">View Details Here</a>
 > - Are you on your master branch?
     - **Yes** - continue with next step
+    - **I dont know** Run the command below
+        - `git branch` - this will highlight the branch you are currenlty on
     - **No** - Make sure you add and commit to your branch you are on then switch to your master branch
         - `git checkout master`
         - `git pull origin master` - **Now continue with the next steps**
