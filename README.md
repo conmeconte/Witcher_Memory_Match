@@ -3,7 +3,7 @@
 #### Overview
 > Version 0.5 is where we combine the basic JS skills we learned through the presentations & prototypes and apply it towards the v0.1 HTML structure. We will be adding the basic functionality to match cards as they are clicked and determine if the game is won by the user.
 
-> For this version we will be breaking down the programmatic flow and explaining the decisions that the program has to make to fully understand how the user is interacting. As we move further into the program we be showing less and less of the flow and expect a certain level of understanding of logical flow. The diagram below should help you follow along with the bullet points.
+> For this version we will be breaking down the programmatic flow and explaining the decisions that the program has to make to fully understand how the user is interacting. As we move further into the program we will be showing less and less of the flow and expect a certain level of understanding of logical flow. The diagram below should help you follow along with the bullet points.
 
 > **Related Videos**
 > - Insert Links Here
@@ -15,10 +15,11 @@
 
 > - If you haven't already started the v0.1 start there - <a href="https://github.com/Learning-Fuze/memory_match/tree/v0.1#getting-started">View Details Here</a>
 > - Are you on your master branch?
-    - **Yes** - continue with next step
+    - **Yes** - continue to "Pull Latest Changes"
     - **I dont know** Run the command below
-        - `git branch` - this will highlight the branch you are currenlty on
-    - **No** - Make sure you add and commit to your branch you are on then switch to your master branch
+        - `git branch` - this will highlight the branch you are currently on
+    - **No** - Make sure you `git add .` and `git commit` to your current branch before you switch to your master branch
+> - Pull Latest Changes    
         - `git checkout master`
         - `git pull origin master` - **Now continue with the next steps**
 > - Create a feature branch
