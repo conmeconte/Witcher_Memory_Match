@@ -14,6 +14,11 @@
 #### Getting Started
 
 > - If you haven't already started the v0.1 start there - <a href="https://github.com/Learning-Fuze/memory_match/tree/v0.1#getting-started">View Details Here</a>
+> - Are you on your master branch?
+    - **Yes** - continue with next step
+    - **No** - Make sure you add and commit to your branch you are on then switch to your master branch
+        - `git checkout master`
+        - `git pull origin master` - **Now continue with the next steps**
 > - Create a feature branch
     - `git checkout -b v0.5`
 > - Work on the scope defined <a href="https://github.com/Learning-Fuze/memory_match/tree/v0.5#scope">Below</a>
