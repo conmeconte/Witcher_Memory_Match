@@ -78,4 +78,4 @@
 >                       - reset both card_clicked
 >                       - variables to null
 >                       - click handler functionality is complete, return
-> <img src="https://docs.google.com/drawings/d/10lvQqhaFnmwiGuQN5ZzMT78Imh09afJs8kegHZBvddk/pub?w=960&h=720" width="750"/>
+> <img src="https://docs.google.com/drawings/d/1JT0nsiTg3HXG2L3QFPnfAmPoQDWUCRNKDvl2qr1r9xo/pub?w=960&h=720" width="750"/>
