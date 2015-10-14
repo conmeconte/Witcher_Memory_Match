@@ -54,6 +54,14 @@ target="_blank">Slides</a>
     - **Replace "Your Name" with your first and last name**
 > - Send to gitHub (Push)
     - `git push origin v1`
+> - Create pull request
+    - Pull request should be made from v1 to **your repository's** master branch
+    - Merge Pull request through Github UI
+> - **Once merge happens through Github UI**
+    - Switch to master branch locally
+        - `git checkout master`
+    - Pull latest merged code
+        - `git pull origin master`
 
 #### Scope
 
