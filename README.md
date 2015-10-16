@@ -5,11 +5,17 @@
 
 > For this version we will be breaking down the programmatic flow and explaining the decisions that the program has to make to fully understand how the user is interacting. As we move further into the program we will be showing less and less of the flow and expect a certain level of understanding of logical flow. The diagram below should help you follow along with the bullet points.
 
+> **Related Reading**
+> - <a href="https://drive.google.com/open?id=0B7eOl4joefDuR2FKZTVvN0lQQ00">READING - JS Comparisons & Conditionals</a>
+> - <a href="https://drive.google.com/open?id=0B7eOl4joefDuRHNPU0xXNUNIRGs">READING - JS Functions</a>
+
 > **Related Videos**
-> - Insert Links Here
+> - <a href="https://plus.google.com/u/0/events/cn2ca07j9v8nt5kdd1olqe3ljrc?authkey=CNK97_OZ4ee8ag">Video - JS Functions</a>
+> - <a href="https://plus.google.com/u/0/hangouts/onair/watch?hid=hoaevent%2Fc4a35jk6e468buf0fpua0em74dc&ytl=...">Video - JS Comparisons and Conditionals</a>
 
 > **Related Prototypes**
-> - Insert Links Here
+> - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_comparisons_conditionals">PROTOTYPE - JS Comparisons & Conditionals</a>
+> - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_functions">PROTOTYPE - JS Functions</a>
 
 #### Getting Started
 
