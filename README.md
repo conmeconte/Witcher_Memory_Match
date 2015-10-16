@@ -1,14 +1,44 @@
 # Memory Match
 
-## Overview
+### Overview
 
-> Memory match is a game with 18 cards face down and the player has to try and match all 9 pairs of matching cards by remembering the position of the cards.
-Once the player has match 2 cards they will be displayed face up until all pairs have been matched. Once all pairs have been matched the user will be
-displayed a message that they have won the game. As the user clicks through the cards stats will be kept letting the user know how many attempts and the
-accuracy of their choices.
+> Version 1.0 continues where version 0.5 stopped by adding in the statistics of the memory match game. When a user clicks on a card the application will start tracking how many matches versus how many attempts. In combination with the stats there is also a tracker for how many times the game is played. Games played is tracked by resetting / restarting the game.
 
-> <a href="https://drive.google.com/open?id=0B7eOl4joefDuWTRUQWU0eXdtRzg" target="_blank">Design Overview</a>
+> ##### Related Reading
 
-> ### Versions
-> - Version 0.5 (v0.5) - <a href="https://github.com/Learning-Fuze/memory_match/tree/v0.5">View Details</a>
-> - Version 0.1 (v0.1) - <a href="https://github.com/Learning-Fuze/memory_match/tree/v0.1">View Details</a>
+> - <a href="https://drive.google.com/open?id=0B7eOl4joefDuQVRUbjFpMlRlOWs">READING - JS Event Handling</a>
+
+> ##### Related Videos
+ 
+> - Link Here
+
+> ##### Related Prototypes
+
+> - Link Here
+
+### Scope
+
+>- Adding Stats
+    - Declare a global variable, `matches`, and set it to 0
+        - Every time the application finds a match this variable should be incremented by 1
+    - Declare a global variable, `attempts`, and set it to 0
+        - Every time a user attempts a match (clicks the 2nd card) the attempts should be incremented by 1
+    - Declare a global variable, `accuracy`, and set it to 0
+        - Accuracy is defined as a percentage of matches / attempts
+    - Declare a global variable, `games_played` and set it to 0
+        - When the page is loaded a new global variable should be defined called games_played. When the game is reset by clicking the reset button the games_played should be incremented by 1.
+    - Declare a function, `display_stats`, that has the following functionality
+        - Inserts the **games_played** value into the element that would be selected like this “.games-played .value”
+        - Insert **attempts** value into the element that would be selected using this selector “.attempts .value”
+        - Formats **accuracy** to be a percentage number with the **%** sign
+        - Takes formatted **accuracy** and inserts the value of the variable into the element that has the selector of “.accuracy .value”
+    - Declare a function, `reset_stats`, that has the following functionality
+        - Resets variable **accuracy** to 0
+        - Resets variable **matches** to 0
+        - Resets variable **attempts** to 0
+    - Calls display_stats function
+      On Reset button click the function handler for the click event should have the following functionality
+      increment games_played by 1
+      call reset_stats
+      call display_stats
+      Reset all cards to have the back face showing
