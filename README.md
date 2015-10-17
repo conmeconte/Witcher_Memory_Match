@@ -19,6 +19,38 @@
 > - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_dom_events#javascript---dom-event-handeling" target="_blank">Proto - JS Event Handling</a> 
 - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_functions#javascript---functions" target="_blank">Proto - JS Functions</a>
 
+#### Getting Started
+
+> - If you haven't already started the v0.1 start there - <a href="https://github.com/Learning-Fuze/memory_match/tree/v0.1#getting-started">View Details Here</a>
+> - Are you on your master branch?
+    - **Yes** - continue to "Pull Latest Changes"
+    - **I dont know** Run the command below
+        - `git branch` - this will highlight the branch you are currently on
+    - **No** - Make sure you `git add .` and `git commit` to your current branch before you switch to your master branch
+> - Pull Latest Changes    
+        - `git checkout master`
+        - `git pull origin master` - **Now continue with the next steps**
+> - Create a feature branch
+    - `git checkout -b v1.0`
+> - Work on the scope defined <a href="https://github.com/Learning-Fuze/memory_match/tree/v1.0#scope">Below</a>
+> - Save your work to gitHub
+> - Add files to git
+    - `git add .`
+> - Commit files (Group files together)
+    - `git commit -m "Memory Match v1.0 - Your Name"`
+    - **Replace "Your Name" with your first and last name**
+> - Send to gitHub (Push)
+    - `git push origin v1.0`
+> - Create pull request
+    - Pull request should be made from v1.0 to **your repository's** master branch
+    - Receive Peer review on your pull request (Wait for Instruction)
+        - Reviewer should merge pull request through Github UI once all comments have been resolved
+> - **Once Peer Review is complete & auto merge happens through Github UI**
+    - Switch to master branch locally
+        - `git checkout master`
+    - Pull latest merged code
+        - `git pull origin master`
+
 ### Scope
 
 >- Adding Stats
