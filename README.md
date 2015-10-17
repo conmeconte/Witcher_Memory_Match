@@ -7,14 +7,17 @@
 > ##### Related Reading
 
 > - <a href="https://drive.google.com/open?id=0B7eOl4joefDuQVRUbjFpMlRlOWs">READING - JS Event Handling</a>
+- <a href="https://drive.google.com/open?id=0B7eOl4joefDuRHNPU0xXNUNIRGs">READING - JS Functions</a>
 
 > ##### Related Videos
  
-> - Link Here
+> - <a href="https://plus.google.com/events/cqla4jlj56hlg36ebuebhm44r4c" target="_blank">Video - Event Handling</a>
+- <a href="https://plus.google.com/u/0/events/cn2ca07j9v8nt5kdd1olqe3ljrc?authkey=CNK97_OZ4ee8ag">Video - JS Functions</a>
 
 > ##### Related Prototypes
 
-> - Link Here
+> - <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_dom_events#javascript---dom-event-handeling" target="_blank">Proto - JS Event Handling</a> 
+- <a href="https://github.com/Learning-Fuze/prototypes/tree/master/js_functions#javascript---functions" target="_blank">Proto - JS Functions</a>
 
 ### Scope
 
@@ -36,9 +39,9 @@
         - Resets variable **accuracy** to 0
         - Resets variable **matches** to 0
         - Resets variable **attempts** to 0
-    - Calls display_stats function
-      On Reset button click the function handler for the click event should have the following functionality
-      increment games_played by 1
-      call reset_stats
-      call display_stats
-      Reset all cards to have the back face showing
+        - Calls **display_stats** function
+    - On **Reset button** click, the function handler for the click event should have the following functionality
+        - increment games_played by 1
+        - call reset_stats
+        - call display_stats
+        - Reset all cards to have the back face showing
