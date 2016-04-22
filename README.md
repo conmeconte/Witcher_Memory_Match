@@ -108,7 +108,7 @@ target="_blank">Slides</a>
 >                      - img element inside with a valid source
 >                  - Card back element with:
 >                      - class **“back”**
->                      - img element inside with a valid
+>                      - img element inside with a valid source
 
 > ##### Add Functionality:
 >  - Inside of the head tag link the following javascript files in order
