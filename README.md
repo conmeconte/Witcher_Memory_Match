@@ -99,7 +99,7 @@ target="_blank">Slides</a>
 >          - Text of **“Reset Game”**
 >  - **Game Area**
 >      - Element with:
->          - class of **“game-area”**
+>          - **id** of **“game-area”**
 >          - 9 matching card elements (18 total) inside with each element having:
 >              - class of **“card”**
 >              - Inside:
