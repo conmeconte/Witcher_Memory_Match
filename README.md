@@ -44,18 +44,18 @@ target="_blank">Slides</a>
     - `git clone https://github.com/[your_user_name]/memory_match.git`
     - **Change [your_user_name] to your user name**
 > - Create a feature branch
-    - `git checkout -b v1`
+    - `git checkout -b v0.1`
 > - Work on the scope defined <a href="https://github.com/Learning-Fuze/memory_match/tree/assets#v0.1">Below</a>
 > - Save your work to gitHub
 > - Add files to git
     - `git add .`
 > - Commit files (Group files together)
-    - `git commit -m "Memory Match v1 - Your Name"`
+    - `git commit -m "Memory Match v0.1 - Your Name"`
     - **Replace "Your Name" with your first and last name**
 > - Send to gitHub (Push)
-    - `git push origin v1`
+    - `git push origin v0.1`
 > - Create pull request
-    - Pull request should be made from v1 to **your repository's** master branch
+    - Pull request should be made from v0.1 to **your repository's** master branch
     - Merge Pull request through Github UI
 > - **Once merge happens through Github UI**
     - Switch to master branch locally
