@@ -1,0 +1,136 @@
+body {
+    background-image: url("../images/PCBRAWL_beauty_001.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#header {
+    border: 5px black solid;
+    margin-top: -20px;
+}
+#header #game_h1 {
+    color: orangered;
+    padding-left: 20vw;
+    margin-top: 50px;
+    margin-bottom: -15px;
+    font-family: Trade Winds;
+    text-shadow: 5px 5px black;
+}
+#header h4 {
+    display: inline-block;
+    color: orangered;
+    font-family: Trade Winds;
+    text-shadow: 3px 3px black;
+}
+#header img {
+    width: 200px;
+    margin-top: -50px;
+}
+
+#settings {
+    padding-left: 35vw;
+    padding-right: 60px;
+}
+#shadow_logo img {
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+}
+#left_stats {
+    border: solid 5px black;
+    float: left;
+    margin-top: 20px;
+    padding-bottom: 150px;
+    background-image: url("../images/shadaloo2.png");
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#left_stats h3 {
+    color: orangered;
+    font-size: 30px;
+    font-family: Trade Winds;
+    text-shadow: 5px 5px black;
+}
+#reset_button {
+    margin-top: 22vw;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.games_played{
+    padding-bottom:20px;
+}
+.attempts{
+    padding-bottom: 20px;
+}
+
+.card {
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    border: solid 3px gray;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+.front > img {
+    width: 145px;
+    height: 195px;
+    position: absolute;
+}
+.back > img {
+    width: 145px;
+    height: 195px;
+    position: absolute;
+}
+#card_row1 {
+    margin-top: 20px;
+    margin-left: 100px;
+    display: inline-block;
+}
+#card_row2 {
+    margin-top: 5px;
+    margin-left: 100px;
+    display: inline-block;
+}
+#card_row3 {
+    margin-top: 5px;
+    margin-left: 100px;
+    display: inline-block;
+}
+/*about game css*/
+
+#header #about_h1 {
+    font-family: Trade Winds;
+    text-shadow: 5px 5px black;
+    color: yellow;
+}
+#about_main{
+    margin-bottom: 120px;
+}
+#about_main #kevin_pic {
+    width: 220px;
+    height: 180px;
+}
+#about_main h3 {
+    color: yellow;
+    font-family: Bungee;
+    text-shadow: 3px 3px black;
+}
+#about_main p {
+    color: lightyellow;
+    font-family: Bungee;
+    position: relative;
+    padding-right: 600px;
+    font-size: 15px;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+}
+#link {
+    font-size: 50px;
+    color: yellow;
+    font-family: Bungee;
+    text-shadow: 3px 3px black;
+    text-decoration: none;
+}

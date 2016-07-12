@@ -1,11 +1,11 @@
 body {
-    background-image: url("images/PCBRAWL_beauty_001.jpg");
+    background-image: url("../images/PCBRAWL_beauty_001.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 #header {
-    border: 5px black solid;
+    /*border: 5px black solid;*/
     margin-top: -20px;
 }
 #header #game_h1 {
@@ -14,13 +14,13 @@ body {
     margin-top: 50px;
     margin-bottom: -15px;
     font-family: Trade Winds;
-    text-shadow: 5px 5px black;
+    text-shadow: 2px 2px yellow;
 }
 #header h4 {
     display: inline-block;
     color: orangered;
     font-family: Trade Winds;
-    text-shadow: 3px 3px black;
+    text-shadow: 2px 2px yellow;
 }
 #header img {
     width: 200px;
@@ -37,28 +37,29 @@ body {
     margin-left: 20px;
 }
 #left_stats {
-    border: solid 5px black;
+    /*border: solid 5px black;*/
     float: left;
     margin-top: 20px;
     padding-bottom: 150px;
-    background-image: url("images/shadaloo2.png");
+    background-image: url("../images/shadaloo2.png");
     background-size: 200px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
 }
 #left_stats h3 {
     color: orangered;
     font-size: 30px;
     font-family: Trade Winds;
-    text-shadow: 5px 5px black;
+    text-shadow: 2px 2px yellow;
 }
 #reset_button {
-    margin-top: 22vw;
+    margin-top: 2vw;
     margin-left: 40px;
     font-size: 20px;
 }
 
 .games_played{
+    margin-top: 15vw;
     padding-bottom:20px;
 }
 .attempts{
@@ -75,13 +76,13 @@ body {
     overflow: hidden;
 }
 .front > img {
-    width: 145px;
-    height: 195px;
+    width: 150px;
+    height: 200px;
     position: absolute;
 }
 .back > img {
-    width: 145px;
-    height: 195px;
+    width: 150px;
+    height: 200px;
     position: absolute;
 }
 #card_row1 {
