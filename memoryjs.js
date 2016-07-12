@@ -3,6 +3,8 @@ var second_card_clicked = null;
 var total_possible_matches = 2;
 var match_counter = 0;
 var attempts = 0;
+var accuracy = 0;
+var games_played = 5;
 var all_cards_off = false;
 
 
@@ -13,6 +15,25 @@ $(document).ready(function(){
 
 
 });
+
+function display_stats() {
+    if(attempts >= 1){
+        $('.attempts .value').text(attempts);
+    }
+    if(games_played >= 1){
+        $('.games-played .value').text(games_played);
+    }
+
+
+}
+
+function reset_stats() {
+    accuracy = 0;
+    match_counter = 0;
+    attempts = 0;
+    games_played++;
+    display_stats();
+}
 
 function flip_cards() {
     first_card_clicked.click(check_cards).children('div.back').show();
@@ -55,6 +76,7 @@ function check_cards() {
             console.log("first card and second card clicked is now",first_card_clicked, "and",second_card_clicked);
             if(match_counter == total_possible_matches){
                 console.log('you win');
+                games_played++
             }
         }
         else {
@@ -66,7 +88,7 @@ function check_cards() {
 
         }
     }
-
+    display_stats();
 }
 
 
