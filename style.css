@@ -9,18 +9,18 @@ body {
     margin-top: -20px;
 }
 #header #game_h1 {
-    color: orangered;
+    color: yellow;
     padding-left: 20vw;
     margin-top: 50px;
     margin-bottom: -15px;
     font-family: Trade Winds;
-    text-shadow: 2px 2px yellow;
+    text-shadow: 2px 2px black;
 }
 #header h4 {
     display: inline-block;
-    color: orangered;
+    color: yellow;
     font-family: Trade Winds;
-    text-shadow: 2px 2px yellow;
+    text-shadow: 2px 2px black;
 }
 #header img {
     width: 200px;
@@ -54,15 +54,21 @@ body {
     display: inline-block;
 }
 #left_stats h3 {
-    color: orangered;
+    color: yellow;
     font-size: 30px;
     font-family: Trade Winds;
-    text-shadow: 2px 2px yellow;
+    text-shadow: 2px 2px black;
 }
 #reset_button {
     margin-top: 2vw;
     margin-left: 40px;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: "Trade Winds";
+    text-shadow: 2px 2px black;
+    color: yellow;
+    -webkit-border-radius: 30px;
+    border: 1px solid yellow;
+    background-color: orangered;
 }
 
 .games_played{

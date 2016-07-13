@@ -4,7 +4,7 @@ var total_possible_matches = 2;
 var match_counter = 0;
 var attempts = 0;
 var accuracy = 0;
-var games_played = 5;
+var games_played = 0;
 var all_cards_off = false;
 
 
@@ -13,6 +13,7 @@ $(document).ready(function(){
     
     $('.card').click(check_cards);
 
+    $('button.reset').click(reset_stats);
 
 });
 
@@ -20,11 +21,19 @@ function display_stats() {
     if(attempts >= 1){
         $('.attempts .value').text(attempts);
     }
-    if(games_played >= 1){
-        $('.games-played .value').text(games_played);
+    else {
+        $('.attempts .value').text(0);
     }
 
+    $('.games_played .value').text(games_played);
 
+    $('.accuracy .value').text(accuracy+"%");
+
+
+}
+function reset_cards(){
+    $('.card').click(check_cards).find('div.back').show();
+    all_cards_off = false;
 }
 
 function reset_stats() {
@@ -33,6 +42,7 @@ function reset_stats() {
     attempts = 0;
     games_played++;
     display_stats();
+    reset_cards();
 }
 
 function flip_cards() {
@@ -71,6 +81,7 @@ function check_cards() {
             console.log('first and second card match');
             match_counter++;
             attempts++;
+            accuracy = ((match_counter/attempts) * 100).toFixed(2);
             first_card_clicked = null;
             second_card_clicked = null;
             console.log("first card and second card clicked is now",first_card_clicked, "and",second_card_clicked);
@@ -81,6 +92,7 @@ function check_cards() {
         }
         else {
             attempts++;
+            accuracy = ((match_counter/attempts) * 100).toFixed(2);
             all_cards_off = true;
             setTimeout(flip_cards, 1000);
             console.log('first and second card do not match');
