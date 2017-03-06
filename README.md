@@ -28,7 +28,7 @@
 
 >- Refactor your code into the following objects:
     - **Game**
-      - *properties*: 
+      - properties: 
         - cards - property that holds the cards in your game
         - first_card_clicked - property that holds the card that was firstly clicked this round
         - second_card_clicked - property that holds the card that was secondarily clicked this round
@@ -50,11 +50,11 @@
            - checks whether it is the first or second card that has been clicked
            - checks if a match has occured
              - takes actions depending on if match occurred
-        - *reset_game*
+        - *reset*
           - purpose: resets the game back to a fresh state
           - params: none
           - returns: the game object
-        - *start_game*
+        - *start*
           - purpose: changes the game state to started and initiates any other functions needed by game
           - params: none
           - returns: the game object
