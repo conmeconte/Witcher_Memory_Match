@@ -86,23 +86,23 @@
          - purpose: handles the click on the card, flipping the card as necessary and informing the game that the click has happened
          - params: none
          - returns: none
-     - **Stats_view**
-       - *dom_element* - the element on the page that stores the stats.  potentially has references to other dom elements that represent other stats
-       - *create_element*
-         - purpose: 
-           - creates or attaches to a stats object on the page  
-         - params: none
-         - returns: none
-       - *display*
-         - purpose: updates dom with the current stat information
-         - params: none
-         - returns: none
-       - *update_info*
-         - purpose: stores information internally in stats view, such as accuracy or attempts
-         - params: multiple
-         - returns: none
-       - *reset*
-         - purpose: resets all stats back to baseline, as necessary
-         - params: multiple
-         - returns: none
+    - **Stats_view**
+      - *dom_element* - the element on the page that stores the stats.  potentially has references to other dom elements that represent other stats
+      - *create_element*
+        - purpose: 
+          - creates or attaches to a stats object on the page  
+        - params: none
+        - returns: none
+      - *display*
+        - purpose: updates dom with the current stat information
+        - params: none
+        - returns: none
+      - *update_info*
+        - purpose: stores information internally in stats view, such as accuracy or attempts
+        - params: multiple
+        - returns: none
+      - *reset*
+        - purpose: resets all stats back to baseline, as necessary
+        - params: multiple
+        - returns: none
       
