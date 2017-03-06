@@ -67,6 +67,7 @@
           - params: none
           - returns: whether the game is won or not
      - **Card**
+       - *dom_element - property that stores the dom element that represents the card
        - *create_element*
          - purpose: 
            - does everything necessary to make the dom element.  
@@ -86,6 +87,7 @@
          - params: none
          - returns: none
      - **Stats_view**
+       - *dom_element* - the element on the page that stores the stats.  potentially has references to other dom elements that represent other stats
        - *create_element*
          - purpose: 
            - creates or attaches to a stats object on the page  
