@@ -27,7 +27,7 @@
 ### Scope
 
 >- Refactor your code into the following objects:
-    - #### Game
+    #### Game
       - *properties*: 
         - cards - property that holds the cards in your game
         - first_card_clicked - property that holds the card that was firstly clicked this round
@@ -66,7 +66,7 @@
           - purpose: checks to see if user won the game, and indicate to the user that the game is won if necessary
           - params: none
           - returns: whether the game is won or not
-     - #### Card
+     #### Card
        - *create_element*
          - purpose: 
            - does everything necessary to make the dom element.  
@@ -85,7 +85,7 @@
          - purpose: handles the click on the card, flipping the card as necessary and informing the game that the click has happened
          - params: none
          - returns: none
-     - #### Stats_view
+     #### Stats_view
        - *create_element*
          - purpose: 
            - creates or attaches to a stats object on the page  
