@@ -31,18 +31,18 @@
         - `git checkout master`
         - `git pull origin master` - **Now continue with the next steps**
 > - Create a feature branch
-    - `git checkout -b v1.0`
+    - `git checkout -b version1.0`
 > - Work on the scope defined <a href="https://github.com/Learning-Fuze/memory_match/tree/v1.0#scope">Below</a>
 > - Save your work to gitHub
 > - Add files to git
     - `git add .`
 > - Commit files (Group files together)
-    - `git commit -m "Memory Match v1.0 - Your Name"`
+    - `git commit -m "Memory Match version1.0 - Your Name"`
     - **Replace "Your Name" with your first and last name**
 > - Send to gitHub (Push)
-    - `git push origin v1.0`
+    - `git push origin version1.0`
 > - Create pull request
-    - Pull request should be made from v1.0 to **your repository's** master branch
+    - Pull request should be made from version1.0 to **your repository's** master branch
     - Receive Peer review on your pull request (Wait for Instruction)
         - Reviewer should merge pull request through Github UI once all comments have been resolved
 > - **Once Peer Review is complete & auto merge happens through Github UI**
