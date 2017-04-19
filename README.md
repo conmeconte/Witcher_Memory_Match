@@ -7,17 +7,17 @@
 > ##### Related Reading
 
 > - <a href="https://docs.google.com/presentation/d/1FhpJTYGzq6vlHaRcTbOGirVJH6GQSYbaav77uzUOgw4/pub?start=false&loop=false&delayms=3000">READING - JS Event Handling</a>
-- <a href="https://docs.google.com/presentation/d/17hxhHxdsEFo42iClxdLfHeMJRnxSu7Y9lt7Tv_J9fIc/pub?start=false&loop=false&delayms=3000">READING - JS Functions</a>
+> - <a href="https://docs.google.com/presentation/d/17hxhHxdsEFo42iClxdLfHeMJRnxSu7Y9lt7Tv_J9fIc/pub?start=false&loop=false&delayms=3000">READING - JS Functions</a>
 
 > ##### Related Videos
  
 > - <a href="https://www.youtube.com/watch?v=cXeHN5uydmY&feature=youtu.be" target="_blank">Video - Event Handling</a>
-- <a href="https://www.youtube.com/watch?v=OzbKGDrjGW0&feature=youtu.be">Video - JS Functions</a>
+> - <a href="https://www.youtube.com/watch?v=OzbKGDrjGW0&feature=youtu.be">Video - JS Functions</a>
 
 > ##### Related Prototypes
 
 > - Proto - JS Event Handling
-- Proto - JS Functions
+> - Proto - JS Functions
 
 #### Getting Started
 
@@ -53,27 +53,27 @@
 
 ### Scope
 
->- Adding Stats
-    - Declare a global variable, `matches`, and set it to 0
-        - Every time the application finds a match this variable should be incremented by 1
-    - Declare a global variable, `attempts`, and set it to 0
-        - Every time a user attempts a match (clicks the 2nd card) the attempts should be incremented by 1
-    - Declare a global variable, `accuracy`, and set it to 0
-        - Accuracy is defined as a percentage of matches / attempts
-    - Declare a global variable, `games_played` and set it to 0
-        - When the page is loaded a new global variable should be defined called games_played. When the game is reset by clicking the reset button the games_played should be incremented by 1.
-    - Declare a function, `display_stats`, that has the following functionality
-        - Inserts the **games_played** value into the element that would be selected like this “.games-played .value”
-        - Insert **attempts** value into the element that would be selected using this selector “.attempts .value”
-        - Formats **accuracy** to be a percentage number with the **%** sign
-        - Takes formatted **accuracy** and inserts the value of the variable into the element that has the selector of “.accuracy .value”
-    - Declare a function, `reset_stats`, that has the following functionality
-        - Resets variable **accuracy** to 0
-        - Resets variable **matches** to 0
-        - Resets variable **attempts** to 0
-        - Calls **display_stats** function
-    - On **Reset button** click, the function handler for the click event should have the following functionality
-        - increment games_played by 1
-        - call reset_stats
-        - call display_stats
-        - Reset all cards to have the back face showing
+- Adding Stats
+  - Declare a global variable, `matches`, and set it to 0
+    - Every time the application finds a match this variable should be incremented by 1
+  - Declare a global variable, `attempts`, and set it to 0
+    - Every time a user attempts a match (clicks the 2nd card) the attempts should be incremented by 1
+  - Declare a global variable, `accuracy`, and set it to 0
+    - Accuracy is defined as a percentage of matches / attempts
+  - Declare a global variable, `games_played` and set it to 0
+    - When the page is loaded a new global variable should be defined called games_played. When the game is reset by clicking the reset button the games_played should be incremented by 1.
+  - Declare a function, `display_stats`, that has the following functionality
+     - Inserts the **games_played** value into the element that would be selected like this “.games-played .value”
+     - Insert **attempts** value into the element that would be selected using this selector “.attempts .value”
+     - Formats **accuracy** to be a percentage number with the **%** sign
+     - Takes formatted **accuracy** and inserts the value of the variable into the element that has the selector of “.accuracy .value”
+  - Declare a function, `reset_stats`, that has the following functionality
+     - Resets variable **accuracy** to 0
+     - Resets variable **matches** to 0
+     - Resets variable **attempts** to 0
+     - Calls **display_stats** function
+  - On **Reset button** click, the function handler for the click event should have the following functionality
+     - increment games_played by 1
+     - call reset_stats
+     - call display_stats
+     - Reset all cards to have the back face showing
