@@ -1,0 +1,107 @@
+html{
+    margin:0;
+    padding:0;
+    width:100vmax;
+    height: 100vmin;
+}
+
+body{
+    background-color: #0a2d6d;
+    background-image: url("https://s.aolcdn.com/hss/storage/midas/b263ca017f3a27431890445b11b611d3/203944279/gwent.jpg");
+    /*background-image: url("https://vignette.wikia.nocookie.net/witcher/images/8/8f/GWENT_wallpaper_keyart_photoshoot_1920x1080_EN.jpg/revision/latest?cb=20160613200153");*/
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+}
+.row {
+    max-width: 100vmax;
+    margin:0 auto;
+}
+section {
+    padding: 5vmax 0;
+}
+
+/*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
+header{
+    display: inline-block;
+}
+
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid #e67e22;
+    padding-bottom: 1px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+}
+.top{
+    width: 102vmax;
+}
+.top>h1{
+    display: inline-block;
+    color: white;
+}
+
+.top a{
+    margin: 3%;
+    right: -41%;
+    position: relative;
+    display: inline-block;
+}
+
+#logo {
+    width: 15vmax;
+    background-color: white;
+}
+
+/*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
+
+.status{
+    background-color: rgba(241, 110, 206, 0.43);
+}
+
+.game-area{
+    background-color: rgba(198, 203, 187, 0.7);
+    /*height: 100*/
+}
+.game-area img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.row1,
+.row2,
+.row3{
+    display:block;
+    position: relative;
+}
+.card{
+    display: inline-block;
+}
+
+
+.card {
+    display: inline-block;
+    width: 8vmax;
+    height: 10vmax;
+    position: relative;
+    margin: 2%;
+    overflow: hidden;
+    left: 3%;
+    border-radius: 19%;
+}
+
+.back{
+    visibility: hidden;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script type="text/javascript" src="main.js"></script>
+
+      <title>Memory Matching Game</title>
+    </head>
+    <body>
+    <header>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://learningfuze.com/images/lfz_1.png" id="logo">
+            </div>
+            <div class="col-md-offset-2 col-md-7 top">
+                <h1>Gwent Memory Match</h1>
+                <a href="#" class=>Setting</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="game_panel">
+        <div class="row">
+            <div class="col-md-2 status">
+                <h2>Status</h2>
+                <div class="games-played">
+                    <h4 class="label">Games Played</h4>
+                    <h5 class="value"></h5>
+                </div>
+                <div class="attemps">
+                    <h4 class="attemps">Attempts</h4>
+                    <h5 class="value"></h5>
+                </div>
+                <div class="accuracy">
+                    <h4 class="lable">Accuracy</h4>
+                    <h5 class="value"></h5>
+                </div>
+                <button class="reset">Reset Game</button>
+            </div>
+
+            <div class="game-area offset-md-1 col-md-9">
+                <div class="row1">
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/3/30/Fringilla_Vigo.gif/revision/latest/scale-to-width-down/157?cb=20170730103544">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/4/42/Geralt.gif/revision/latest/scale-to-width-down/157?cb=20170412201914">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/d/d4/Eskel3.gif/revision/latest/scale-to-width-down/157?cb=20170822190118">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/7/7e/Avallac%27h.gif/revision/latest/scale-to-width-down/157?cb=20170731102210">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/9/98/Torrential_Rain.gif/revision/latest?cb=20170728224407">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/d/d4/Eskel3.gif/revision/latest/scale-to-width-down/157?cb=20170822190118">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row2">
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/3/30/Fringilla_Vigo.gif/revision/latest/scale-to-width-down/157?cb=20170730103544">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/8/85/Iris.gif/revision/latest/scale-to-width-down/157?cb=20170731104142">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/9/98/Torrential_Rain.gif/revision/latest?cb=20170728224407">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/8/85/Iris.gif/revision/latest/scale-to-width-down/157?cb=20170731104142">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/d/d3/Marching_Orders.gif/revision/latest?cb=20170731104452">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/a/af/Triss%3B_Butterfly_Spell.gif/revision/latest/scale-to-width-down/157?cb=20170731102902">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row3">
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/7/7e/Avallac%27h.gif/revision/latest/scale-to-width-down/157?cb=20170731102210">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/8/83/Fake_Ciri.gif/revision/latest/scale-to-width-down/157?cb=20170730103424">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/8/83/Fake_Ciri.gif/revision/latest/scale-to-width-down/157?cb=20170730103424">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/d/d3/Marching_Orders.gif/revision/latest?cb=20170731104452">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/4/42/Geralt.gif/revision/latest/scale-to-width-down/157?cb=20170412201914">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://vignette.wikia.nocookie.net/gwent/images/a/af/Triss%3B_Butterfly_Spell.gif/revision/latest/scale-to-width-down/157?cb=20170731102902">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    </body>
+</html>
