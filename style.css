@@ -75,7 +75,7 @@ a:active {
     width: 8vmax;
 }
 #pop-out{
-    position: absolute;
+    position: fixed;
     z-index: 100;
     bottom:0;
     right: -111px;
@@ -145,8 +145,10 @@ a:active {
     overflow: hidden;
     left: 4%;
     border-radius: 19%;
+    z-index: 1000;
 }
 
-.back{
+.card:hover .back{
     visibility: hidden;
 }
+
