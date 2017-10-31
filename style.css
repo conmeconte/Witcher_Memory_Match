@@ -1,75 +1,120 @@
-html{
-    margin:0;
-    padding:0;
-    width:100vmax;
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vmax;
     height: 100vmin;
+    position: relative;
 }
 
 body{
     background-color: #0a2d6d;
-    background-image: url("https://s.aolcdn.com/hss/storage/midas/b263ca017f3a27431890445b11b611d3/203944279/gwent.jpg");
+    background-image: url("https://www.gamewallpapers.com/wallpapers_slechte_compressie/wallpaper_gwent_the_witcher_card_game_01_1920x1080.jpg");
     /*background-image: url("https://vignette.wikia.nocookie.net/witcher/images/8/8f/GWENT_wallpaper_keyart_photoshoot_1920x1080_EN.jpg/revision/latest?cb=20160613200153");*/
     background-repeat: no-repeat;
-    width: 100%;
+    width: 100vmax;
+    height: 100vmin;
     background-size: cover;
+    position: relative;
 }
 .row {
     max-width: 100vmax;
     margin:0 auto;
 }
 section {
-    padding: 5vmax 0;
+    padding-top: 1vmax;
 }
 
 /*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
 header{
-    display: inline-block;
-}
+    display: block;
+    position: relative;
 
+}
+#main_title{
+    height: 8vmax;
+    width: 40vmax;
+    margin-left: 10vmax;
+    background-color: rgba(255,255,255,0.7);
+}
+#title_frame{
+    position: absolute;
+    width: 42.5vmax;
+    height: 10.5vmax;
+    left: 10vmax;
+    top: -1vmax;
+}
 a:link,
 a:visited {
     color: #e67e22;
     text-decoration: none;
-    border-bottom: 1px solid #e67e22;
-    padding-bottom: 1px;
     transition: border-bottom 0.2s, color 0.2s;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    padding: 5px;
+    font-family:'IM Fell English SC';
+
 }
 
 a:hover,
 a:active {
     color: #555;
-    border-bottom: 1px solid transparent;
     text-decoration: none;
 }
-.top{
-    width: 102vmax;
-}
-.top>h1{
-    display: inline-block;
-    color: white;
+.top {
+
 }
 
 .top a{
-    margin: 3%;
-    right: -41%;
+    margin:0 2vmax;
+    /*right: -20vmax;*/
     position: relative;
     display: inline-block;
 }
 
 #logo {
-    width: 15vmax;
-    background-color: white;
+    width: 8vmax;
+}
+#pop-out{
+    position: absolute;
+    z-index: 100;
+    bottom:0;
+    right: -111px;
+    width: 34vmax;
 }
 
 /*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
 
 .status{
     background-color: rgba(241, 110, 206, 0.43);
+    width: auto;
+    font-size: 100%;
+    padding: 5vmax 0.5vmax;
+    position: relative;
+    margin-left: 5px;
+    text-align: center;
+    font-family:'IM Fell English SC';
+}
+.status *{
+    margin-bottom: 3vmax;
+}
+#status_frame{
+    position: absolute;
+    top: -9%;
+    width: 107%;
+    height: 123%;
+    left: -4%;
 }
 
 .game-area{
-    background-color: rgba(198, 203, 187, 0.7);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 4.4%;
+    margin-left: 5vmax;
+    position: relative;
     /*height: 100*/
+}
+#board{
+    position: absolute;
+    opacity: 0.6;
 }
 .game-area img{
     position: absolute;
@@ -93,12 +138,12 @@ a:active {
 
 .card {
     display: inline-block;
-    width: 8vmax;
-    height: 10vmax;
+    width: 8.5vmax;
+    height: 11vmax;
     position: relative;
-    margin: 2%;
+    margin: 1% 1.5%;
     overflow: hidden;
-    left: 3%;
+    left: 4%;
     border-radius: 19%;
 }
 

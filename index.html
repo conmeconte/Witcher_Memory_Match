@@ -3,6 +3,8 @@
     <head>
       <meta charset="UTF-8">
       <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+      <link rel="stylesheet" href="MasonSerif.ttf">
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="style.css">
       <script type="text/javascript" src="main.js"></script>
@@ -10,22 +12,27 @@
       <title>Memory Matching Game</title>
     </head>
     <body>
+    <img src="http://www.pngmart.com/files/4/The-Witcher-PNG-Pic.png" id="pop-out">
     <header>
         <div class="row">
-            <div class="col-md-3">
-                <img src="https://learningfuze.com/images/lfz_1.png" id="logo">
+            <div class="col-md-2">
+                <img src="https://i.pinimg.com/originals/69/3b/4a/693b4ae691cb87c3e550ca7d8501b79d.png" id="logo">
+                <!--<img src="https://learningfuze.com/images/lfz_1.png" id="logo">-->
             </div>
-            <div class="col-md-offset-2 col-md-7 top">
-                <h1>Gwent Memory Match</h1>
+            <div class="col-md-offset-1 col-md-9 top">
+                <!--<h1>Gwent Memory Match</h1>-->
+                <img src="img/Gwent_logo.png" id="main_title">
+                <img src="img/frame.png" id="title_frame">
                 <a href="#" class=>Setting</a>
-                <a href="#">About</a>
+                <a href="about.html">About</a>
             </div>
         </div>
     </header>
 
     <section class="game_panel">
         <div class="row">
-            <div class="col-md-2 status">
+            <div class="status">
+                <img src="img/frame.png" alt="" id="status_frame">
                 <h2>Status</h2>
                 <div class="games-played">
                     <h4 class="label">Games Played</h4>
@@ -42,7 +49,8 @@
                 <button class="reset">Reset Game</button>
             </div>
 
-            <div class="game-area offset-md-1 col-md-9">
+            <div class="game-area col-md-9">
+                <img src="img/board.jpg" id="board">
                 <div class="row1">
                     <div class="card">
                         <div class="front">
