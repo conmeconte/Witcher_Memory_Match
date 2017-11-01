@@ -1,5 +1,8 @@
 $(document).ready(function(){
     $('.card').on("click", card_clicked);
+});
+
+
     var first_card_clicked= null;
     var second_card_clicked = null;
     var total_possible_matches=9;
@@ -48,6 +51,6 @@ $(document).ready(function(){
             }
         }
     }
-});
+
 
 
