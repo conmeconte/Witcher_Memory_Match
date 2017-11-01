@@ -134,6 +134,7 @@ a:active {
 .row3{
     display:block;
     position: relative;
+    width: 95%;
 }
 .card{
     display: inline-block;
