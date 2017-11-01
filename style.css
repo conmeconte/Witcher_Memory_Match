@@ -89,7 +89,7 @@ a:active {
 /*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
 
 .status{
-    background-color: rgba(241, 110, 206, 0.43);
+    background: rgba(241, 110, 206, 0.43);
     width: auto;
     font-size: 100%;
     padding: 5vmax 0.5vmax;
@@ -107,6 +107,13 @@ a:active {
     width: 107%;
     height: 123%;
     left: -4%;
+    z-index:0;
+}
+.reset{
+    position: relative;
+    z-index: 10;
+    color: green;
+
 }
 
 .game-area{
