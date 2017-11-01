@@ -8,40 +8,46 @@ $(document).ready(function(){
 
 
     function card_clicked() {
-        if(bouncer === true){
-            bouncer=false;
-        if (first_card_clicked === null) {
-            first_card_clicked = this;
-            $(first_card_clicked).addClass('hidden');
-            bouncer=true;
-            return;
+        if(bouncer === true) {
+            bouncer = false;
+            if (first_card_clicked === null) {
+                first_card_clicked = this;
+                $(first_card_clicked).addClass('hidden');
+                bouncer = true;
+                return;
 
-        } else {
-            second_card_clicked = this;
-            $(second_card_clicked).addClass('hidden');
-            if (first_card_clicked === second_card_clicked) {
-                match_counter++;
-                first_card_clicked = null;
-                second_card_clicked = null;
-                if (match_counter === total_possible_matches) {
-                    return alert("You Win!")
-                } else {
-                    return
-                }
             } else {
-                setTimeout(delay, 2000);
-
-                function delay() {
-                    $(first_card_clicked).removeClass('hidden');
-                    $(second_card_clicked).removeClass('hidden');
+                second_card_clicked = this;
+                $(second_card_clicked).addClass('hidden');
+                var first_card_attr=$(first_card_clicked).find(".front img").attr('src');
+                var second_card_attr=$(second_card_clicked).find(".front img").attr('src');
+                if (first_card_attr === second_card_attr) {
+                    match_counter++;
                     first_card_clicked = null;
                     second_card_clicked = null;
-                    bouncer=true; }
-                return;
+
+                    if (match_counter === total_possible_matches) {
+                        return alert("You Win!")
+                    } else {
+                        bouncer=true;
+                        return
+                    }
+                } else {
+                    setTimeout(delay, 2000);
+
+                    function delay() {
+                        $(first_card_clicked).removeClass('hidden');
+                        $(second_card_clicked).removeClass('hidden');
+                        first_card_clicked = null;
+                        second_card_clicked = null;
+                        bouncer = true;
+                    }
+
+                    return;
+                }
             }
         }
-
-    }}
+    }
 });
 
 
