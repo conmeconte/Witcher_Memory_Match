@@ -3,7 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" href="MasonSerif.ttf">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
     <style>
+        *{
+            box-sizing: border-box;
+        }
+        html {
+            margin: 0;
+            padding: 0;
+            /*width: 100vmax;*/
+            /*height: 100vmin;*/
+            position: relative;
+            font-size: 2vmin;
+        }
+        body{
+            background-color: #0a2d6d;
+            background-image: url("img/wallpaper_gwent_the_witcher_card_game_01_1920x1080.jpg");
+            background-repeat: no-repeat;
+            width: 100vmax;
+            height: 100vmin;
+            background-size: cover;
+            position: relative;
+        }
+        header{
+            display: block;
+            position: relative;
+            height: 20vmin;
+            width: 100vmax;
+            left: -25vmax;
+
+        }
+        #main_title{
+            height: 8vmax;
+            width: 40.5vmax;
+            margin-left: 10vmax;
+            background-color: rgba(255,255,255,0.7);
+        }
+        #title_frame{
+            position: absolute;
+            width: 43vmax;
+            height: 10.5vmax;
+            left: 14vmax;
+            top: -1vmax;
+            margin: 0;
+        }
+        a:link,
+        a:visited {
+            color: #e67e22;
+            text-decoration: none;
+            transition: border-bottom 0.2s, color 0.2s;
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 50%;
+            padding: 5px;
+            font-family:'IM Fell English SC';
+            font-size: 1em;
+
+        }
+
+        a:hover,
+        a:active {
+            color: #555;
+            text-decoration: none;
+        }
+        .top {
+
+        }
+
+        .top a{
+            margin:0 2vmax;
+            /*right: -20vmax;*/
+            position: relative;
+            display: inline-block;
+        }
+
+        #logo {
+            width: 8vmax;
+        }
         body{
             width: 50vmax;
             position: relative;
@@ -11,16 +89,18 @@
             text-align: center;
 
         }
-        header>*{
+        .sub_header*{
             display: block;
         }
-        header a{
+        .sub_header a{
             margin-bottom: 3vmax;
+            display:block;
         }
-        img{
+        .sub_header img{
             width: 10vmax;
             left: 20vmax;
             position: relative;
+            display: block;
         }
         .game_description{
             border-top: 3px dotted red;
@@ -31,15 +111,35 @@
             margin: 0;
             padding: 0;
         }
+        .content{
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <header>
+<header>
+    <div class="row">
+        <div class="col-md-2">
+            <img src="img/game_logo.png" id="logo">
+            <!--<img src="https://learningfuze.com/images/lfz_1.png" id="logo">-->
+        </div>
+        <div class="col-md-offset-1 col-md-9 top">
+            <!--<h1>Gwent Memory Match</h1>-->
+            <img src="img/Gwent_logo.png" id="main_title">
+            <img src="img/frame.png" id="title_frame">
+            <a href="#" class=>Setting</a>
+            <a href="index.html">Game</a>
+        </div>
+    </div>
+</header>
+<section class="content">
+    <div class="sub_header">
         <h1>Gwen Card Memory Match Battle</h1>
         <h3>By Chung Hwan Hong</h3>
         <img src="img/Mypic.jpg" alt="">
         <a href="#">My portfolio</a>
-    </header>
+    </div>
     <section class="game_description">
         <h3>Rules</h3>
             <p>Just do it</p>
@@ -48,7 +148,9 @@
                 <li>Html</li>
                 <li>CSS</li>
                 <li>Javascript</li>
+                <li>Lots of Patience</li>
             </ul>
     </section>
+</section>
 </body>
 </html>

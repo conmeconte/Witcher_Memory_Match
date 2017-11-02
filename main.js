@@ -8,14 +8,22 @@ $(document).ready(function(){
         games_played++;
         reset_stats();
         display_stats();
-        mix_card();
+        $('.row1').addClass('ring');
+        $('.row2').addClass('ring');
+        $('.row3').addClass('ring');
+        setTimeout(removeRow, 5000);
+        setTimeout(mix_card, 6000)
         $('.card').removeClass('hidden');
     });
     $('.close').click(function() {
         $('.modal').css({display: 'none'});
     });
     // $('.row1').sortable();   sortable not working why?
-
+    $(window).click( function() {
+        if ($('.modal').css('display') === 'block') {
+            $('.modal').css({display: 'none'});
+        }
+    });
 });
 
 
@@ -63,13 +71,17 @@ $(document).ready(function(){
                     }
                 } else {
                     setTimeout(delay, 2000);
-
+                    $('.card').addClass('spinner');
                     function delay() {
                         $(first_card_clicked).removeClass('hidden');
                         $(second_card_clicked).removeClass('hidden');
+                        $('.card').removeClass('spinner');
+
                         first_card_clicked = null;
                         second_card_clicked = null;
                         bouncer = true;
+                        // animation: spin 8s infinite linear;
+
                     }
                     return;
                 }
@@ -92,6 +104,7 @@ $(document).ready(function(){
         attempt=0;
         display_stats();
         $('.card').removeAttr("gotit");
+
     }
     function mix_card(){
         var row1= $('.row1');
@@ -111,13 +124,9 @@ function openModal() {
     $('.modal').css({display: 'block'});
 }
 
-// When the user clicks on <span> (x), close the modal
-
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
+function removeRow(){
+    $('.row1').removeClass('ring');
+    $('.row2').removeClass('ring');
+    $('.row3').removeClass('ring');
+}
 

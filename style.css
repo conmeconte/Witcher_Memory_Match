@@ -82,10 +82,10 @@ a:active {
 }
 #pop-out{
     position: fixed;
-    z-index: 100;
-    bottom:0;
-    right: -111px;
-    width: 34vmax;
+    z-index: 1;
+    bottom:-20vmin;
+    height: 70vmin;
+    right: 1vmax;
 }
 
 /*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
@@ -123,7 +123,9 @@ a:active {
     border-radius: 4.4%;
     margin-left: 5vmax;
     position: relative;
-    /*height: 100*/
+    height: 70vmin;
+    padding: 0;
+    padding-top: 2%;
 }
 #board{
     position: absolute;
@@ -144,22 +146,22 @@ a:active {
     display:block;
     position: relative;
     width: 95%;
-}
-.card{
-    display: inline-block;
+    height: 30%;
+    margin: 0;
 }
 
 
 .card {
     display: inline-block;
-    width: 8.5vmax;
-    height: 11vmax;
+    width: 11%;
+    height: 90%;
     position: relative;
     margin: 1% 1.5%;
     overflow: hidden;
-    left: 4%;
+    left: 11%;
     border-radius: 19%;
-    z-index: 1;
+    z-index: 3;
+
 }
 
 .hidden .back {
@@ -185,13 +187,14 @@ a:active {
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: rgba(0,0,0,0.7);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
     z-index: 10;
     text-align: center;
+    color: white;
 }
 
 /* The Close Button */
@@ -200,6 +203,7 @@ a:active {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    text-align: right;
 }
 
 .close:hover,
@@ -212,4 +216,69 @@ a:active {
 #myBtn{
     position: relative;
     left: 217px;
+}
+
+/*-----------------test------*/
+.spinner{
+    animation: spin 2s 2 linear;
+
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotateY(0); }
+    to   { -webkit-transform: rotateY(-360deg); }
+}
+.game-area{
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-transform-style: preserve-3d;
+}
+.ring>.card{
+    -webkit-transition: -webkit-transform 2s, opacity 2s;
+    /*margin: 0 auto;*/
+    /*-webkit-backface-visibility: hidden;*/
+    -webkit-backface-visibility: visible;
+    margin: 0;
+    padding:0;
+    position: absolute;
+}
+
+.ring{
+    -webkit-animation: spin 8s infinite linear;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: visible;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    height: 10%;
+    left: 40%;
+}
+
+.row2.ring{
+    top: 30%;
+}
+.row3.ring{
+    top: 60%;
+}
+.ring > .one {
+    -webkit-transform: translateZ(20vmax);
+}
+
+.ring > .two {
+    -webkit-transform: rotateY(60deg) translateZ(20vmax);
+}
+
+.ring > .three {
+    -webkit-transform: rotateY(120deg) translateZ(20vmax);
+}
+
+.ring > .four {
+    -webkit-transform: rotateY(180deg) translateZ(20vmax);
+}
+
+.ring > .five {
+    -webkit-transform: rotateY(240deg) translateZ(20vmax);
+}
+
+.ring > .six {
+    -webkit-transform: rotateY(300deg) translateZ(20vmax);
 }
