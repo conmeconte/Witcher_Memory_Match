@@ -12,7 +12,7 @@ html {
 
 body{
     background-color: #0a2d6d;
-    background-image: url("https://www.gamewallpapers.com/wallpapers_slechte_compressie/wallpaper_gwent_the_witcher_card_game_01_1920x1080.jpg");
+    background-image: url("img/wallpaper_gwent_the_witcher_card_game_01_1920x1080.jpg");
     /*background-image: url("https://vignette.wikia.nocookie.net/witcher/images/8/8f/GWENT_wallpaper_keyart_photoshoot_1920x1080_EN.jpg/revision/latest?cb=20160613200153");*/
     background-repeat: no-repeat;
     width: 100vmax;
@@ -46,6 +46,7 @@ header{
     height: 10.5vmax;
     left: 10vmax;
     top: -1vmax;
+    margin: 0;
 }
 a:link,
 a:visited {
@@ -56,6 +57,7 @@ a:visited {
     border-radius: 50%;
     padding: 5px;
     font-family:'IM Fell English SC';
+    font-size: 1em;
 
 }
 
@@ -99,7 +101,7 @@ a:active {
     font-family:'IM Fell English SC';
 }
 .status *{
-    margin-bottom: 3vmax;
+    /*margin-bottom: 3vmax;*/
 }
 #status_frame{
     position: absolute;
@@ -157,13 +159,57 @@ a:active {
     overflow: hidden;
     left: 4%;
     border-radius: 19%;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .hidden .back {
     visibility: hidden;
 }
 
+/*-----------------------------MODAL-------------------------------*/
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 11; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
+}
 
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+    text-align: center;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn{
+    position: relative;
+    left: 217px;
+}

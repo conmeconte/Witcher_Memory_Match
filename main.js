@@ -8,12 +8,15 @@ $(document).ready(function(){
         games_played++;
         reset_stats();
         display_stats();
+        mix_card();
         $('.card').removeClass('hidden');
-        console.log('hehahaha');
-
     });
-});
+    $('.close').click(function() {
+        $('.modal').css({display: 'none'});
+    });
+    // $('.row1').sortable();   sortable not working why?
 
+});
 
 
     var first_card_clicked= null;
@@ -29,13 +32,13 @@ $(document).ready(function(){
 
 
     function card_clicked(obj) {
-        if(bouncer === true) {
+        if(bouncer === true && $(obj).attr('gotit') === undefined) {
             bouncer = false;
             if (first_card_clicked === null) {
                 first_card_clicked = obj;
                 $(first_card_clicked).addClass('hidden');
                 bouncer = true;
-                return;
+                return; // Unneeded,
 
             } else {
                 second_card_clicked = obj;
@@ -45,12 +48,15 @@ $(document).ready(function(){
                 var second_card_attr=$(second_card_clicked).find(".front img").attr('src');
                 if (first_card_attr === second_card_attr) {
                     match_counter++;
+                    $(first_card_clicked).attr('gotit', true);
+                    $(second_card_clicked).attr('gotit', true);
                     first_card_clicked = null;
                     second_card_clicked = null;
-                    matches++
+                    matches++;
+
 
                     if (match_counter === total_possible_matches) {
-                        return alert("You Win!")
+                        openModal();
                     } else {
                         bouncer=true;
                         return
@@ -65,7 +71,6 @@ $(document).ready(function(){
                         second_card_clicked = null;
                         bouncer = true;
                     }
-
                     return;
                 }
             }
@@ -86,4 +91,33 @@ $(document).ready(function(){
         matches=0;
         attempt=0;
         display_stats();
+        $('.card').removeAttr("gotit");
     }
+    function mix_card(){
+        var row1= $('.row1');
+        var row1Card1= $('.row1>.card:first-of-type');
+        $('.game-area').append(row1);
+        $('.row1').append(row1Card1);
+        $('.row2').append($('.row2>.card:nth-of-type(2)'));
+    }
+
+    //-----------------------------------------MODAL-----------------------------------------------------------------------/
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+
+function openModal() {
+    $('.modal').css({display: 'block'});
+}
+
+// When the user clicks on <span> (x), close the modal
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
