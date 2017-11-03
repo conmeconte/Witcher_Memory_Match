@@ -58,6 +58,7 @@ a:visited {
     padding: 5px;
     font-family:'IM Fell English SC';
     font-size: 1em;
+    width: auto;
 
 }
 
@@ -74,11 +75,15 @@ a:active {
     margin:0 2vmax;
     /*right: -20vmax;*/
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
+    width: 5%;
+    text-align: center;
 }
 
 #logo {
-    width: 8vmax;
+    width: 14vmax;
+    height: 15vmin;
+    box-shadow: 0 0 20px 15px #1b1e21;
 }
 #pop-out{
     position: fixed;
@@ -86,6 +91,9 @@ a:active {
     bottom:-20vmin;
     height: 70vmin;
     right: 1vmax;
+}
+#pop-out:hover{
+    cursor: help;
 }
 
 /*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
@@ -140,13 +148,11 @@ a:active {
     opacity: 0.6;
 }
 
-.row1,
-.row2,
-.row3{
+.row1{
     display:block;
     position: relative;
     width: 95%;
-    height: 30%;
+    height: 90%;
     margin: 0;
 }
 
@@ -154,15 +160,29 @@ a:active {
 .card {
     display: inline-block;
     width: 11%;
-    height: 90%;
+    height: 30%;
     position: relative;
     margin: 1% 1.5%;
     overflow: hidden;
-    left: 11%;
-    border-radius: 19%;
+    left: 10%;
+    border-radius: 10%;
     z-index: 3;
-
+    animation: cardBlink 2s ease-in-out infinite;
 }
+
+@-webkit-keyframes cardBlink {
+    from {     box-shadow: 0 0 20px 7px white;}
+    to   {     box-shadow: 0 0 2px 1px white;}
+}
+
+.card:hover,
+.card:active {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    border:2px solid rgba(0,160,80,0);
+    transition: all 0.3s ease-in-out 0s;
+    box-shadow: 0 0 20px 7px white;
+}
+
 
 .hidden .back {
     visibility: hidden;
@@ -194,6 +214,17 @@ a:active {
     background-color: rgba(0,0,0,0); /* Black w/ opacity */
 
 }
+#myModal3 {
+    left: 50vmax;
+    top: 40vmin;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0);
+    transform: translate(-50%,-50%);
+
+}
 /* Modal Content/Box */
 .modal-content {
     background-color: rgba(0,0,0,0.7);
@@ -205,20 +236,33 @@ a:active {
     text-align: center;
     color: white;
 }
-#myModal2 .modal-content {
+
+#myModal2 .modal-content{
+background-color: rgba(0,0,0,0.7);
+margin: 15% auto; /* 15% from the top and centered */
+padding: 20px;
+padding-top:5px;
+border: 1px solid #888;
+width: 60%; /* Could be more or less, depending on screen size */
+z-index: 10;
+text-align: center;
+color: white;
+border-radius: 30%;
+
+}
+
+#myModal3 .modal-content{
     background-color: rgba(0,0,0,0.7);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     padding-top:5px;
     border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
+    width: 30%;
     z-index: 10;
     text-align: center;
     color: white;
-    border-radius: 30%;
 
 }
-
 /* The Close Button */
 .close {
     color: #aaa;
@@ -229,7 +273,7 @@ a:active {
 }
 
 .close:hover,
-.close:focus {
+.close:focus{
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -250,6 +294,8 @@ a:active {
     from { -webkit-transform: rotateY(0); }
     to   { -webkit-transform: rotateY(-360deg); }
 }
+
+
 .game-area{
     -webkit-transition: -webkit-transform 2s;
     -webkit-transform-style: preserve-3d;
@@ -267,42 +313,61 @@ a:active {
 }
 
 .ring{
-    -webkit-animation: spin 8s infinite linear;
+    -webkit-animation: spin 8s infinite ease;
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: visible;
     width: 40%;
     margin: 0;
     padding: 0;
-    height: 10%;
-    left: 40%;
+    height: 30%;
+    left: 30%;
+    top: 20%;
 }
 
-.row2.ring{
-    top: 30%;
-}
-.row3.ring{
-    top: 60%;
-}
 .ring > .one {
     -webkit-transform: translateZ(20vmax);
 }
 
 .ring > .two {
-    -webkit-transform: rotateY(60deg) translateZ(20vmax);
+    -webkit-transform: rotateY(20deg) translateZ(20vmax);
 }
 
 .ring > .three {
-    -webkit-transform: rotateY(120deg) translateZ(20vmax);
+    -webkit-transform: rotateY(40deg) translateZ(20vmax);
 }
 
 .ring > .four {
-    -webkit-transform: rotateY(180deg) translateZ(20vmax);
+    -webkit-transform: rotateY(60deg) translateZ(20vmax);
 }
 
 .ring > .five {
-    -webkit-transform: rotateY(240deg) translateZ(20vmax);
+    -webkit-transform: rotateY(80deg) translateZ(20vmax);
 }
 
 .ring > .six {
+    -webkit-transform: rotateY(100deg) translateZ(20vmax);
+}.ring > .seven {
+    -webkit-transform: rotateY(120deg) translateZ(20vmax);
+}.ring > .eight {
+    -webkit-transform: rotateY(140deg) translateZ(20vmax);
+}.ring > .nine {
+    -webkit-transform: rotateY(160deg) translateZ(20vmax);
+}.ring > .ten {
+    -webkit-transform: rotateY(180deg) translateZ(20vmax);
+}.ring > .eleven {
+    -webkit-transform: rotateY(200deg) translateZ(20vmax);
+}.ring > .twelve {
+    -webkit-transform: rotateY(220deg) translateZ(20vmax);
+}.ring > .thirteen {
+    -webkit-transform: rotateY(240deg) translateZ(20vmax);
+}.ring > .fourteen {
+    -webkit-transform: rotateY(260deg) translateZ(20vmax);
+}.ring > .fifteen {
+    -webkit-transform: rotateY(280deg) translateZ(20vmax);
+}.ring > .sixteen {
     -webkit-transform: rotateY(300deg) translateZ(20vmax);
+}.ring > .seventeen {
+    -webkit-transform: rotateY(320deg) translateZ(20vmax);
+}.ring > .eighteen {
+    -webkit-transform: rotateY(340deg) translateZ(20vmax);
 }
