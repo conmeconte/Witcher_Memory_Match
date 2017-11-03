@@ -12,7 +12,7 @@ $(document).ready(function(){
         $('.row2').addClass('ring');
         $('.row3').addClass('ring');
         setTimeout(removeRow, 5000);
-        setTimeout(mix_card, 6000)
+        setTimeout(mix_card, 6000);
         $('.card').removeClass('hidden');
     });
     $('.close').click(function() {
@@ -23,7 +23,15 @@ $(document).ready(function(){
         if ($('.modal').css('display') === 'block') {
             $('.modal').css({display: 'none'});
         }
+        // if($('#myModal2').css('display')=== 'block'){
+        //     $('#myModal2').css({display: 'none'});
+        // }
     });
+
+    $('#pop-out').on('click',function(){
+        openModal(this);
+    });
+
 });
 
 
@@ -64,7 +72,7 @@ $(document).ready(function(){
 
 
                     if (match_counter === total_possible_matches) {
-                        openModal();
+                        setTimeout(openModal,1000);
                     } else {
                         bouncer=true;
                         return
@@ -116,12 +124,12 @@ $(document).ready(function(){
 
     //-----------------------------------------MODAL-----------------------------------------------------------------------/
 
-// Get the modal
-var modal = document.getElementById('myModal');
 
 
-function openModal() {
-    $('.modal').css({display: 'block'});
+function openModal(element) {
+    if($(element).attr('id') === "pop-out"){
+        $('#myModal2').css({display: 'block'})
+    } else{ $('.modal').css({display: 'block'})}
 }
 
 function removeRow(){
