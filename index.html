@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <link rel="stylesheet" href="MasonSerif.ttf">
         <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
@@ -16,11 +17,11 @@
     <body>
     <header>
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-2 col-sm-2">
                 <img src="img/logo2.gif" id="logo">
                 <!--<img src="https://learningfuze.com/images/lfz_1.png" id="logo">-->
             </div>
-            <div class="col-md-offset-1 col-md-9 top">
+            <div class="col-md-offset-1 col-md-9 col-sm-offset-1 col-sm-9 top">
                 <!--<h1>Gwent Memory Match</h1>-->
                 <img src="img/Gwent_logo.png" id="main_title">
                 <img src="img/frame.png" id="title_frame">
@@ -47,10 +48,14 @@
                     <h4 class="label">Accuracy</h4>
                     <h5 class="value">-</h5>
                 </div>
+                <div class="points">
+                    <h4 class="label">Points</h4>
+                    <h5 class="value">-</h5>
+                </div>
                 <button class="reset">Reset Game</button>
             </div>
 
-            <div class="game-area col-md-9">
+            <div class="game-area">
                 <img src="img/board.jpg" id="board">
                 <div class="row1">
                     <div class="card one">
@@ -218,7 +223,7 @@
             <!-- Modal content -->
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Status</h2>
+                <h2>You Win!</h2>
                 <div class="games-played">
                     <h4 class="label">Games Played</h4>
                     <h5 class="value">-</h5>

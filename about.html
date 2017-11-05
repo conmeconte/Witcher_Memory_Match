@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+
     <link rel="stylesheet" href="MasonSerif.ttf">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script>
+        $(document).ready(initializeApp());
 
+        function initializeApp(){
+            var settingClick= new Audio();
+            settingClick.src = "sound/Naxx_Frostwyrm_Lair.ogg";
+            settingClick.play();
+        }
+    </script>
     <style>
         *{
             box-sizing: border-box;
+            font-size: 0;
         }
         html {
             margin: 0;
             padding: 0;
-            /*width: 100vmax;*/
-            /*height: 100vmin;*/
-            position: relative;
-            font-size: 2vmin;
+
         }
         body{
             background-color: #0a2d6d;
@@ -31,24 +39,45 @@
         header{
             display: block;
             position: relative;
-            height: 20vmin;
-            width: 100vmax;
-            left: -25vmax;
-
+            height: 20%;
+            width: 100%;}
+        header .row{
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        .logos{
+            width: 10%;
+            height: 100%;
+            margin-left: 1%;
+        }
+        #logo{
+            width:100%;
+            height: 100%;
+        }
+        .top{
+            width: 89%;
+            height: 100%;
+            display:inline-block;
+            margin-bottom: 5%;
         }
         #main_title{
-            height: 8vmax;
-            width: 40.5vmax;
-            margin-left: 10vmax;
-            background-color: rgba(255,255,255,0.7);
+            width: 50%;
+            height: 100%;
+            left:17%;
+            position: relative;
+            display:inline-block;
+            margin-right: 16%;
+
+
         }
         #title_frame{
-            position: absolute;
-            width: 43vmax;
-            height: 10.5vmax;
-            left: 14vmax;
-            top: -1vmax;
-            margin: 0;
+            width: 50%;
+            height: 101%;
+            left:22%;
+            position:absolute;
+            display:inline-block;
+
         }
         a:link,
         a:visited {
@@ -57,9 +86,11 @@
             transition: border-bottom 0.2s, color 0.2s;
             background-color: rgba(255,255,255,0.7);
             border-radius: 50%;
-            padding: 5px;
+            padding: 1em;
             font-family:'IM Fell English SC';
             font-size: 1em;
+            width: auto;
+
 
         }
 
@@ -68,63 +99,56 @@
             color: #555;
             text-decoration: none;
         }
-        .top {
-
-        }
-
-        .top a{
-            margin:0 2vmax;
-            /*right: -20vmax;*/
-            position: relative;
-            display: inline-block;
-        }
-
-        #logo {
-            width: 8vmax;
-        }
-        body{
-            width: 50vmax;
-            position: relative;
-            left: 25vmax;
-            text-align: center;
-
-        }
-        .sub_header*{
-            display: block;
-        }
-        .sub_header a{
-            margin-bottom: 3vmax;
-            display:block;
-        }
-        .sub_header img{
-            width: 10vmax;
-            left: 20vmax;
-            position: relative;
-            display: block;
-        }
-        .game_description{
-            border-top: 3px dotted red;
-        }
-        ul,
-        li{
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+        .row a{
+            width: auto;
+            display:inline-block;
+            font-size: 1vw;
+            margin-left: 5%;
         }
         .content{
-            background-color: rgba(0,0,0,0.7);
-            color: white;
+            height: 80%;
+            width: 80%;
+            left: 10%;
+            position: relative;
         }
+        .content *{
+            display: block;
+            font-family:'IM Fell English SC';
+            font-size: 2vw;
+            text-align: center;
+        }
+        .sub_header{
+            height: 50%;
+            width: 100%;
+        }
+        .sub_header img{
+            width: 50%;
+            height: 50%;
+            left: 25%;
+            position: relative;
+            margin: 1% 0;
+            box-shadow: 0px 0px 3vw 1vw rgb(17, 17, 17);
+
+        }
+        .sub_header a{
+            width: 30%;
+            left: 35%;
+            position: relative;
+        }
+        .sub_header h1, h3, p, ul{
+            background-color: rgba(255, 231, 132, 0.51);
+        }
+
     </style>
 </head>
 <body>
 <header>
     <div class="row">
-        <div class="col-md-2">
+        <div class="logos">
             <img src="img/game_logo.png" id="logo">
             <!--<img src="https://learningfuze.com/images/lfz_1.png" id="logo">-->
         </div>
-        <div class="col-md-offset-1 col-md-9 top">
+        <div class="top">
             <!--<h1>Gwent Memory Match</h1>-->
             <img src="img/Gwent_logo.png" id="main_title">
             <img src="img/frame.png" id="title_frame">

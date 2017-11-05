@@ -1,0 +1,49 @@
+/*=========================Media Query=============================*/
+
+/* Big tablet to 1200px (width smaller than the 1140px row)*/
+@media only screen and (max-width: 1200px){
+
+}
+
+/*Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px){
+
+}
+
+
+/* Small phones to small tablets 481px to 767 px*/
+@media only screen and (max-width: 767px){
+
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px){
+    body{
+        height: 100vmin;
+    }
+    .status{
+        background: rgba(241, 110, 206, 0.43);
+        width: auto;
+        font-size: 100%;
+        padding: 5vmax 0.5vmax;
+        position: relative;
+        margin-left: 5px;
+        text-align: center;
+        font-family:'IM Fell English SC';
+        display: block;
+    }
+    .game-area{
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 2.0%;
+        margin-left: 5vmax;
+        position: relative;
+        height: 70vmin;
+        padding: 0;
+        padding-top: 2%;
+        /* padding-left: 10%; */
+        width: 75%;
+        box-shadow: 0 0 20px 20px #636f7b;
+        display: block;
+    }
+}
+
