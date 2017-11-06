@@ -116,18 +116,6 @@ $(document).ready(function() {
            ];
 
 
-    // function shuffleCard(cards){
-    //     var cardArrayCopy=[cards.slice(), cards.slice()];
-    //     for(var pair_index=0; pair_index<2; pair_index++) {
-    //         for (var card_index = (cardArrayCopy[pair_index].length), card_order=1; card_index >=0 ,card_order<=cards.length; card_index--, card_order++) {
-    //             var randomCard = Math.floor(Math.random() * cardArrayCopy[pair_index].length);
-    //             var chosenCard = (cardArrayCopy[pair_index])[randomCard];
-    //             var newCardIndex = ((card_order)+(cards.length*pair_index));
-    //             $(".card:nth-of-type(" + newCardIndex + ")>.front>img").attr('src', chosenCard);
-    //             cardArrayCopy[pair_index].splice(randomCard, 1);
-    //         }
-    //     }
-    // }
     function shuffleCard2(cards){
         var cardArrayCopy=[cards.slice(), cards.slice()];
         for(var pair_index=0; pair_index<2; pair_index++) {

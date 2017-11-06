@@ -224,7 +224,9 @@ a:active {
 
 .hidden .back {
     visibility: hidden;
+
 }
+
 
 .match_card{
     animation: cardBlink3 3s ease-in-out 1;
@@ -348,13 +350,19 @@ a:active {
 /*-----------------test------*/
 .spinner{
     animation: spin 2s 2 linear;
-
 }
+/*.spinner3{*/
+    /*animation: spin3 1s 1 linear;*/
+/*}*/
 
 @-webkit-keyframes spin {
     from { -webkit-transform: rotateY(0); }
     to   { -webkit-transform: rotateY(-360deg); }
 }
+/*@-webkit-keyframes spin3 {*/
+    /*from { -webkit-transform: rotateY(0); }*/
+    /*to   { -webkit-transform: rotateY(-180deg); }*/
+/*}*/
 
 
 .game-area{
