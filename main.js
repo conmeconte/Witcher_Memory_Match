@@ -74,45 +74,7 @@ $(document).ready(function() {
     var cardPairs=2;
     var game_points=0;
     var isPlaying= false;
-    var frontCardArray2=[
-        {
-            src: "img/Avallac'h.gif",
-            power: 10,
-            cardType: "regular"},
-        {
-            src: "img/Fringilla_Vigo.gif",
-            power: 6,
-            cardType:"regular"},
-        {
-            src: "img/Marching_Orders.gif",
-            power: 0,
-            cardType: "marching"},
-        {
-            src: "img/Triss;_Butterfly_Spell.gif",
-            power: 5,
-            cardType:"regular"},
-        {
-            src:  "img/Torrential_Rain.gif",
-            power: 0,
-            cardType:"rain"},
-        {
-            src:  "img/Eskel3.gif",
-            power: 5,
-            cardType:"regular"},
-        {
-            src:  "img/Iris.gif",
-            power: 2,
-            cardType:"regular"},
-        {
-            src:  "img/Geralt.gif",
-            power: 12,
-            cardType:"regular"},
-        {
-            src:  "img/Fake_Ciri.gif",
-            power: 6,
-            cardType:"regular"}
-           ];
-
+ 
 
     function shuffleCard2(cards){
         var cardArrayCopy=[cards.slice(), cards.slice()];
@@ -224,23 +186,23 @@ infoMusic.src = "sound/Collection Manager.ogg";
 
 function openModal(element) {
     if($(element).attr('id') === "pop-out"){
-        if($('#myModal2').css('display')=== 'block'){
-            $('#myModal2').css({display: 'none'});
+        if($('#rulesModal').css('display')=== 'block'){
+            $('#rulesModal').css({display: 'none'});
             infoMusic.pause();
             infoMusic.currentTime = 0.0;
         }else{
-            $('#myModal2').css({display: 'block'});
+            $('#rulesModal').css({display: 'block'});
             infoMusic.play();
         }
     }else if($(element).attr('class') === "setting"){
-        if($('#myModal3').css('display')=== 'block'){
-            $('#myModal3').css({display: 'none'});
+        if($('#settingModal').css('display')=== 'block'){
+            $('#settingModal').css({display: 'none'});
 
         }else{
-            $('#myModal3').css({display: 'block'});
+            $('#settingModal').css({display: 'block'});
         }
     } else{
-        $('#myModal').css({display: 'block'});
+        $('#winModal').css({display: 'block'});
         var settingClick= new Audio();
         settingClick.src = "sound/victory_screen_start.ogg";
         settingClick.play();
@@ -286,10 +248,10 @@ function togglePlay() {
 function checkSoundOption(){
     var userOption = localStorage.getItem('music');
     if(userOption==='on'){
-        var isPlaying= false; 
+        isPlaying= false; 
         togglePlay(); 
     }else{
-        var isPlaying=true;
+        isPlaying=true;
         togglePlay(); 
     }
 }
