@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
     shuffleCard2(frontCardArray2);
+    checkSoundOption(); 
     $('.card').click(function () {
         card_clicked(this);
         display_stats();
@@ -32,9 +33,6 @@ $(document).ready(function() {
         settingClick2.src = "sound/crafting_create_card_start.ogg";
         settingClick2.play();
         $('.card').removeClass('match_card');
-
-
-
     });
     $('.close').click(function () {
         $('.modal').css({display: 'none'});
@@ -59,9 +57,9 @@ $(document).ready(function() {
 
     $('.sounds').on('click', togglePlay);
 
-
-
 });
+
+/*========================Global Variables===============================================*/
 
     var first_card_clicked= null;
     var second_card_clicked = null;
@@ -75,7 +73,7 @@ $(document).ready(function() {
     var games_played=1;
     var cardPairs=2;
     var game_points=0;
-    // var frontCardArray=["img/Avallac'h.gif","img/Fringilla_Vigo.gif","img/Marching_Orders.gif","img/Triss;_Butterfly_Spell.gif","img/Torrential_Rain.gif", "img/Eskel3.gif", "img/Iris.gif", "img/Geralt.gif", "img/Fake_Ciri.gif"]
+    var isPlaying= false;
     var frontCardArray2=[
         {
             src: "img/Avallac'h.gif",
@@ -131,7 +129,6 @@ $(document).ready(function() {
         }
     }
 
-    var isPlaying= false;
     /*===============================Button Click Function==============================================*/
     function card_clicked(obj) {
         if(bouncer === true && $(obj).attr('gotit') === undefined) {
@@ -257,14 +254,7 @@ function removeRow(){
 }
 
 //--------------------------Sound-----------------------------------//
-// function playSound(sound_class) {
-//     var sound_url=$(sound_class + ' source').attr('src');  //$('.sound_what source').attr('src')
-//     $(sound_url)[0].play();
-// };
 
-// function togglePlay() {
-//     return myOst.paused ? myOst.play() : myOst.pause();
-// }; doesn't work
 
 var $soundOff=$('<i>').attr({
     class: "fa fa-volume-off",
@@ -280,7 +270,7 @@ function togglePlay() {
         isPlaying = false;
         $("i").remove();
         $('.sounds').append($soundOff);
-
+        localStorage.setItem('music', 'off');
 
 
     } else {
@@ -288,5 +278,18 @@ function togglePlay() {
         isPlaying = true;
         $("i").remove();
         $('.sounds').append($soundOn);
+        localStorage.setItem('music', 'on');
+
     }
 };
+
+function checkSoundOption(){
+    var userOption = localStorage.getItem('music');
+    if(userOption==='on'){
+        var isPlaying= false; 
+        togglePlay(); 
+    }else{
+        var isPlaying=true;
+        togglePlay(); 
+    }
+}
