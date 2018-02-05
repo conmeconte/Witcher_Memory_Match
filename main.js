@@ -5,11 +5,13 @@ $(document).ready(function() {
     $('.card').click(function () {
         card_clicked(this);
         display_stats();
+        settingClick.pause();
         settingClick.src = "sound/class_tab_click.ogg";
         settingClick.play();
     });
     $('.card').on('mouseenter', function() {
         settingClick.volume = 0.4;
+        settingClick.pause();
         settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
         settingClick.play();
     });
@@ -24,8 +26,10 @@ $(document).ready(function() {
         setTimeout(removeRow, 5000);
         setTimeout(shuffleCard2(frontCardArray2), 6000);
         $('.card').removeClass('hidden');
+        settingClick.pause();
         settingClick.src = "sound/AdventurePanel_down.ogg";
         settingClick.play();
+        settingClick.pause();
         settingClick2.src = "sound/crafting_create_card_start.ogg";
         settingClick2.play();
         $('.card').removeClass('match_card');
@@ -46,6 +50,7 @@ $(document).ready(function() {
     });
     $('.setting').on('click', function () {
         openModal(this);
+        settingClick.pause();
         settingClick.src = "sound/AdventurePanel_down.ogg";
         settingClick.play();
     });
@@ -91,9 +96,10 @@ $(document).ready(function() {
 
     /*===============================Button Click Function==============================================*/
     function card_clicked(obj) {
-        if(bouncer === true && $(obj).attr('gotit') === undefined) {
+        // if(bouncer === true && $(obj).attr('gotit') === undefined) {
+        if(bouncer && !$(obj).attr('gotit')) {
             bouncer = false;
-            if (first_card_clicked === null) {
+            if (!first_card_clicked) {
                 first_card_clicked = obj;
                 $(first_card_clicked).addClass('hidden');
                 bouncer = true;
