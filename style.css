@@ -138,9 +138,11 @@ a:active {
 .reset{
     position: relative;
     z-index: 10;
-    color: green;
+    color: #e67e22;
     margin-top: 10%;
-
+    border: none;
+    background-color: white;
+    height: 6%; 
 }
 
 .game-area{

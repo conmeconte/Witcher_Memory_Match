@@ -23,13 +23,17 @@ $(document).ready(function() {
         $('.row1').addClass('ring');
         $('.row2').addClass('ring');
         $('.row3').addClass('ring');
+        bouncer=false;
         setTimeout(removeRow, 5000);
-        setTimeout(shuffleCard2(frontCardArray2), 6000);
+        setTimeout(()=>{
+            shuffleCard2(frontCardArray2);
+            bouncer=true; 
+        }, 6000);
         $('.card').removeClass('hidden');
         settingClick.pause();
         settingClick.src = "sound/AdventurePanel_down.ogg";
         settingClick.play();
-        settingClick.pause();
+        settingClick2.pause();
         settingClick2.src = "sound/crafting_create_card_start.ogg";
         settingClick2.play();
         $('.card').removeClass('match_card');
