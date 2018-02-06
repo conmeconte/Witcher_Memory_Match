@@ -41,7 +41,6 @@ $(document).ready(function() {
     $('.close').click(function () {
         $('.modal').css({display: 'none'});
     });
-    // $('.row1').sortable();   sortable not working why?
     $(window).click(function () {
         if ($('.modal').css('display') === 'block') {
             $('.modal').css({display: 'none'});
@@ -88,10 +87,8 @@ $(document).ready(function() {
         for(var pair_index=0; pair_index<2; pair_index++) {
             for (var card_index = (cardArrayCopy[pair_index].length), card_order=1; card_index >=0 ,card_order<=cards.length; card_index--, card_order++) {
                 var randomCard = Math.floor(Math.random() * cardArrayCopy[pair_index].length);
-                // var chosenCard = (cardArrayCopy[pair_index])[randomCard].src;
                 var chosenCard = (cardArrayCopy[pair_index])[randomCard];
                 var newCardIndex = ((card_order)+(cards.length*pair_index));
-                // $(".card:nth-of-type(" + newCardIndex + ")>.front>img").attr('src', chosenCard);
                 $(".card:nth-of-type(" + newCardIndex + ")>.front>img").attr(chosenCard);
                 cardArrayCopy[pair_index].splice(randomCard, 1);
             }
@@ -100,7 +97,6 @@ $(document).ready(function() {
 
     /*===============================Button Click Function==============================================*/
     function card_clicked(obj) {
-        // if(bouncer === true && $(obj).attr('gotit') === undefined) {
         if(bouncer && !$(obj).attr('gotit')) {
             bouncer = false;
             if (!first_card_clicked) {
@@ -108,7 +104,6 @@ $(document).ready(function() {
                 $(first_card_clicked).addClass('hidden');
                 bouncer = true;
                 $(first_card_clicked).attr('gotit', true);
-                return; // Unneeded,
 
             } else {
                 second_card_clicked = obj;
@@ -120,16 +115,12 @@ $(document).ready(function() {
                     match_counter++;
                     var points= $(second_card_clicked).find(".front img").attr('power');
                     game_points+= parseInt(points);
-                    // $(first_card_clicked).attr('gotit', true);
                     $(second_card_clicked).attr('gotit', true);
                     $(first_card_clicked).addClass('match_card');
                     $(second_card_clicked).addClass('match_card');
                     first_card_clicked = null;
                     second_card_clicked = null;
                     matches++;
-
-
-
                     if (match_counter === total_possible_matches) {
                         setTimeout(openModal,1000);
 
@@ -156,7 +147,6 @@ $(document).ready(function() {
                         first_card_clicked = null;
                         second_card_clicked = null;
                         bouncer = true;
-                        // animation: spin 8s infinite linear;
                     }
                     return;
                 }
