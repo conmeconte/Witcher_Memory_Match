@@ -441,6 +441,10 @@ a:active {
     .status div{
         margin: 5vmin auto; 
     }
+    .row1{
+        height: 90vmin; 
+        margin-top:4vmin; 
+    }
 }
 
 /*Small tablet to big tablet: from 768px to 1023px */
@@ -451,6 +455,16 @@ a:active {
     }
     a:first-of-type{
         margin: 5% 0 0 2%;
+    }
+    .row1{
+        height: 60vmin; 
+    }
+
+    .status{
+        padding: 0 0.5%; 
+    }
+    .status div{
+        margin: 20% auto; 
     }
 }
 
@@ -522,14 +536,15 @@ a:active {
         height: 88%;
     }
     .status{
-        padding: 20% 0.5%; 
-        font-size: 2em; 
+        padding: 5% 0.5%; 
+        font-size: 1em; 
     }
     .row1{
-        margin-top: 8vmin; 
+        margin-top: 3vmin;  
+        height: 90%;
     }
     .card{
-        margin: 5% 1%; 
+        margin: 1% 1%; 
     }
     #pop-out{
         bottom: 0%; 
@@ -594,16 +609,17 @@ a:active {
         border-radius: 5%;
         padding: 5px;
         font-family:'IM Fell English SC';
-        font-size: 1em;
-        width: auto;
+        font-size: 3em;
+        width: 40%;
         display: inline-block;
-        margin: 2% 13% ;
+        height: 40%; 
+        /* margin: 2% 13% ; */
     }
 
     .status{
         background: rgba(241, 110, 206, 0.43);
         width: 95%;
-        font-size: 150%;
+        font-size: 2em;
         position: relative;
         text-align: center;
         font-family:'IM Fell English SC';
@@ -616,12 +632,20 @@ a:active {
     .status div{
         display:inline-block; 
         width: 49%; 
+        margin: 5% auto;
     }
+    .status h2, h4, h5 {
+        font-size: 1.5em; 
+    }
+
     .reset{
-        left:0%;
+        left: 50%;
         margin: 0;
         bottom: 3%;
         position: absolute;
+        transform: translateX(-50%);
+        font-size: 2em;
+        height: 13%;
 
     }
     .game-area{
@@ -645,7 +669,13 @@ a:active {
         right: 7%;
     }
     .row1{
-        margin-top: 3%;
+        margin-top: 0;
+        height:90%; 
+    }
+    .card{
+        margin: 5% 1%; 
+        height: 25%; 
+    }
     }
     #rulesModal{
         left:7vmax; 
