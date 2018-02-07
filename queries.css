@@ -30,6 +30,12 @@
         height: 90%; 
         margin-top:4%; 
     }
+    .ring{
+        height: 25%; 
+    }
+    .ring>.card{
+        height: 150%; 
+    }
 
 }
 
@@ -56,6 +62,12 @@
     }
     .status div{
         margin: 20% auto; 
+    }
+    .ring{
+        height: 25%; 
+    }
+    .ring>.card{
+        height: 150%; 
     }
 }
 
@@ -148,6 +160,21 @@
         bottom: 0%; 
 
     }
+    #settingModal{
+        height: 75%;
+    }
+    #settingModal a{
+        width: 100%; 
+    }
+    #rulesModal{
+        height: 60%; 
+    }
+    .ring{
+        height: 25%; 
+    }
+    .ring>.card{
+        height: 150%; 
+    }
 }
 
 /* Small phones: from 0 to 480px */
@@ -214,6 +241,9 @@
         /* margin: 2% 13% ; */
     }
 
+    .modal-content a{
+        width:100%; 
+    }
     .status{
         background: rgba(241, 110, 206, 0.43);
         width: 100%;
@@ -283,9 +313,18 @@
         width: 80%; 
     }
     #settingModal{
-        left: 10vmax;
-        top: 48vmin; 
+        /* left: 10vmax; */
+        top: 50%; 
         width: 100%; 
 
+    }
+    #settingModal>.modal-content{
+        width: 60%; 
+    }
+    .ring{
+        height: 25%; 
+    }
+    .ring>.card{
+        height: 150%; 
     }
 }

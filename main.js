@@ -5,13 +5,13 @@ $(document).ready(function() {
     $('.card').click(function () {
         card_clicked(this);
         display_stats();
-        settingClick.pause();
+        var settingClick= new Audio();
         settingClick.src = "sound/class_tab_click.ogg";
         settingClick.play();
     });
     $('.card').on('mouseenter', function() {
+        var settingClick= new Audio();
         settingClick.volume = 0.4;
-        settingClick.pause();
         settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
         settingClick.play();
     });
@@ -30,10 +30,10 @@ $(document).ready(function() {
             bouncer=true; 
         }, 6000);
         $('.card').removeClass('hidden');
-        settingClick.pause();
+        var settingClick= new Audio();
         settingClick.src = "sound/AdventurePanel_down.ogg";
         settingClick.play();
-        settingClick2.pause();
+        var settingClick2= new Audio();
         settingClick2.src = "sound/crafting_create_card_start.ogg";
         settingClick2.play();
         $('.card').removeClass('match_card');
@@ -53,7 +53,7 @@ $(document).ready(function() {
     });
     $('.setting').on('click', function () {
         openModal(this);
-        settingClick.pause();
+        var settingClick= new Audio();
         settingClick.src = "sound/AdventurePanel_down.ogg";
         settingClick.play();
     });
@@ -77,8 +77,7 @@ $(document).ready(function() {
     var cardPairs=2;
     var game_points=0;
     var isPlaying= false;
-    var settingClick= new Audio();
-    var settingClick2= new Audio();
+
 
 
 
