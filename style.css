@@ -71,6 +71,8 @@ a:visited {
     font-family:'IM Fell English SC';
     font-size: 1em;
     margin-left: 5%;
+    width:120px; 
+
 
 }
 
@@ -331,7 +333,7 @@ a:active {
 #settingModal .modal-content{
     background-color: rgba(0,0,0,0.7);
     margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    padding: 60px;
     padding-top:5px;
     border: 1px solid #888;
     width: 30%;
