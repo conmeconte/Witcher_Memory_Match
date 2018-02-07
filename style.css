@@ -1,0 +1,445 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-size: 1em;
+    font-family:'IM Fell English SC';
+
+}
+
+body{
+    background-color: #0a2d6d;
+    background-image: url("img/wallpaper_gwent_the_witcher_card_game_01_1920x1080.jpg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+
+}
+.row {
+    width: 100%;
+    margin:0 auto;
+}
+section {
+    padding-top: 1vmax;
+}
+
+/*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
+header{
+    display: block;
+    position: relative;
+    height: 16%;
+    margin: 1% 0 1% 1%;
+}
+header .row{
+    height: 100%;
+}
+#main_title{
+    height: 100%;
+    width: 57%;
+    margin-left: 13%;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: inset 0px 0px 20px 15px black;
+}
+#title_frame{
+    position: absolute;
+    width: 59%;
+    height: 127%;
+    left: 12%;
+    top: -10%;
+    margin: 0;
+}
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    transition: border-bottom 0.2s, color 0.2s;
+    background-color: rgba(255,255,255,1);
+    border-radius: 5%;
+    padding: 1em;
+    font-family:'IM Fell English SC';
+    font-size: 1em;
+    margin-left: 5%;
+
+}
+
+a:hover,
+a:active {
+    color: #555;
+    text-decoration: none;
+    transform: scale(1.15);
+    background-color: rgba(75, 252, 143, 0.932); 
+}
+.top {
+
+}
+
+.top a{
+    margin:0 2%;
+    position: relative;
+    text-align: center;
+}
+
+#logo {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 2% 2% #250f22;
+
+}
+#pop-out{
+    position: fixed;
+    z-index: 1;
+    bottom:-20%;
+    width: 15%;
+    right: -3%;
+}
+#pop-out:hover{
+    cursor: help;
+}
+
+/*-------------------0000000000000000000000000000000000000000000000000000000000000000----------------------------*/
+.game_panel{
+    height: 80%;
+}
+.game_panel .row{
+    height: 100%;
+}
+.status{
+    background: rgba(241, 110, 206, 0.43);
+    width: auto;
+    font-size: 100%;
+    padding: 3% 0.5%;
+    position: relative;
+    margin-left: 3%;
+    text-align: center;
+    font-family:'IM Fell English SC';
+    top: 5%;
+    height: 85%;
+    color: white; 
+
+}
+
+.status>h2{
+    margin-bottom: 50%; 
+}
+
+#status_frame{
+    position: absolute;
+    top: -9%;
+    width: 107%;
+    height: 123%;
+    left: -4%;
+    z-index:0;
+}
+.reset{
+    position: relative;
+    z-index: 10;
+    color: #e67e22;
+    margin-top: 10%;
+    border: none;
+    background-color: white;
+    height: 6%; 
+    border-radius: 5%; 
+}
+.reset:hover{
+    cursor: pointer; 
+    color: #555;
+    background-color: rgba(75, 252, 143, 0.932);
+}
+
+.game-area{
+    background: rgba(255, 255, 255, 0.7);
+    margin-left: 5%;
+    position: relative;
+    height: 90%;
+    padding: 0;
+    width: 75%;
+    box-shadow: 0px 2px 20px 12px rgb(145, 112, 95), 1px 0px 8px 8px rgb(144, 111, 92);
+    margin-top: 1%;
+}
+
+.game-area img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    box-shadow: inset 0 0 0px 0px #22303e;
+}
+#board{
+    opacity: 0.6;
+}
+
+.row1{
+    display:block;
+    position: relative;
+    width: 80%;
+    height: 70vmin;
+    font-size: 0;
+    box-sizing: border-box;
+    margin: auto; 
+    margin-top:1vmin; 
+}
+
+
+.card {
+    display: inline-block;
+    width: 14.6%;
+    height: 30%;
+    position: relative;
+    margin: 1% 1%;
+    overflow: hidden;
+    border-radius: 10%;
+    z-index: 3;
+    font-size: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 2px white;
+}
+.card:hover,
+.card:active {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    border:2px solid rgba(0,160,80,0);
+    transition: all 0.3s ease-in-out 0s;
+    animation: cardBlink 3s ease-in-out infinite;
+}
+
+@-webkit-keyframes cardBlink {
+    from {     box-shadow: 0 0 20px 7px #feff7e;}
+    to   {     box-shadow: 0 0 2px 1px #ffd69a;}
+}
+
+
+
+@-webkit-keyframes cardBlink2 {
+    from {     box-shadow: 0 0 30px 15px #6853ff;}
+    to   {     box-shadow: 0 0 2px 1px #593bff;}
+}
+
+
+.hidden .back {
+    visibility: hidden;
+
+}
+
+
+.match_card{
+    animation: cardBlink3 3s ease-in-out 1;
+    box-shadow: 0 0 20px 10px #ff191e;
+
+
+}
+@-webkit-keyframes cardBlink3 {
+    from {     box-shadow: 0 0 30px 15px #ff191e;}
+    to   {     box-shadow: 0 0 2px 1px #ff1b30;}
+}
+
+/*-----------------------------MODAL-------------------------------*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 11; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family:'IM Fell English SC';
+
+
+}
+#rulesModal {
+    left: 50vmax;
+    top: 25vmin;
+    width: 50%; /* Full width */
+    height: 50%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    font-family:'IM Fell English SC';
+
+
+}
+#settingModal {
+    left: 55%;
+    top: 30%;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0);
+    transform: translate(-50%,-50%);
+    font-family:'IM Fell English SC';
+
+
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: rgba(0,0,0,0.7);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+    text-align: center;
+    color: white;
+    font-family:'IM Fell English SC';
+
+}
+
+#rulesModal .modal-content{
+    background-color: rgba(0,0,0,0.7);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    padding-top:5px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    z-index: 10;
+    text-align: center;
+    color: white;
+    font-family:'IM Fell English SC';
+
+
+}
+
+#settingModal .modal-content{
+    background-color: rgba(0,0,0,0.7);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    padding-top:5px;
+    border: 1px solid #888;
+    width: 30%;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    font-family:'IM Fell English SC';
+
+
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.close:hover,
+.close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn{
+    position: relative;
+    left: 217px;
+}
+
+/*-----------------test------*/
+.spinner{
+    animation: spin 2s 2 linear;
+}
+.spinner2{
+    animation: spin2 1s 1 linear;
+}
+
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotateY(0); }
+    to   { -webkit-transform: rotateY(-360deg); }
+}
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotateY(0); }
+    to   { -webkit-transform: rotateY(-180deg); }
+}
+
+
+.game-area{
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-transform-style: preserve-3d;
+}
+.ring>.card{
+    -webkit-transition: -webkit-transform 2s, opacity 2s;
+    /*margin: 0 auto;*/
+    /*-webkit-backface-visibility: hidden;*/
+    -webkit-backface-visibility: visible;
+    margin: 0;
+    padding:0;
+    position: absolute;
+    width: 20%;
+    height: 200%;
+}
+
+.ring{
+    -webkit-animation: spin 8s infinite ease;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: visible;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+    height: 30%;
+    left: 30%;
+    top: 20%;
+}
+
+.ring > .one {
+    -webkit-transform: translateZ(20vmax);
+}
+
+.ring > .two {
+    -webkit-transform: rotateY(20deg) translateZ(20vmax);
+}
+
+.ring > .three {
+    -webkit-transform: rotateY(40deg) translateZ(20vmax);
+}
+
+.ring > .four {
+    -webkit-transform: rotateY(60deg) translateZ(20vmax);
+}
+
+.ring > .five {
+    -webkit-transform: rotateY(80deg) translateZ(20vmax);
+}
+
+.ring > .six {
+    -webkit-transform: rotateY(100deg) translateZ(20vmax);
+}.ring > .seven {
+    -webkit-transform: rotateY(120deg) translateZ(20vmax);
+}.ring > .eight {
+    -webkit-transform: rotateY(140deg) translateZ(20vmax);
+}.ring > .nine {
+    -webkit-transform: rotateY(160deg) translateZ(20vmax);
+}.ring > .ten {
+    -webkit-transform: rotateY(180deg) translateZ(20vmax);
+}.ring > .eleven {
+    -webkit-transform: rotateY(200deg) translateZ(20vmax);
+}.ring > .twelve {
+    -webkit-transform: rotateY(220deg) translateZ(20vmax);
+}.ring > .thirteen {
+    -webkit-transform: rotateY(240deg) translateZ(20vmax);
+}.ring > .fourteen {
+    -webkit-transform: rotateY(260deg) translateZ(20vmax);
+}.ring > .fifteen {
+    -webkit-transform: rotateY(280deg) translateZ(20vmax);
+}.ring > .sixteen {
+    -webkit-transform: rotateY(300deg) translateZ(20vmax);
+}.ring > .seventeen {
+    -webkit-transform: rotateY(320deg) translateZ(20vmax);
+}.ring > .eighteen {
+    -webkit-transform: rotateY(340deg) translateZ(20vmax);
+}
+
+
+
+
+
