@@ -39,6 +39,10 @@ header{
 header .row{
     height: 100%;
 }
+header>.row>div{
+    height: 100%; 
+    position:relative; 
+}
 #main_title{
     height: 100%;
     width: 57%;
