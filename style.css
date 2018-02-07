@@ -5,7 +5,7 @@ html {
     margin: 0;
     padding: 0;
     position: relative;
-    font-size: 1vw;
+    font-size: 1em;
     font-family:'IM Fell English SC';
 
 }
@@ -79,7 +79,7 @@ a:active {
 }
 
 .top a{
-    margin:0 2vmax;
+    margin:0 2%;
     position: relative;
     text-align: center;
 }
@@ -87,7 +87,7 @@ a:active {
 #logo {
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 2vw 2vw #250f22;
+    box-shadow: 0 0 2% 2% #250f22;
 
 }
 #pop-out{
@@ -119,7 +119,12 @@ a:active {
     font-family:'IM Fell English SC';
     top: 5%;
     height: 85%;
+    color: white; 
 
+}
+
+.status>h2{
+    margin-bottom: 50%; 
 }
 
 #status_frame{
@@ -140,10 +145,15 @@ a:active {
     height: 6%; 
     border-radius: 5%; 
 }
+.reset:hover{
+    cursor: pointer; 
+    color: #555;
+    background-color: rgba(75, 252, 143, 0.932);
+}
 
 .game-area{
     background: rgba(255, 255, 255, 0.7);
-    margin-left: 5vmax;
+    margin-left: 5%;
     position: relative;
     height: 90%;
     padding: 0;
@@ -258,9 +268,9 @@ a:active {
 
 }
 #settingModal {
-    left: 50vmax;
-    top: 40vmin;
-    width: 50%;
+    left: 55%;
+    top: 30%;
+    width: 100%;
     height: 50%;
     overflow: hidden;
     background-color: rgb(0,0,0);
@@ -430,264 +440,6 @@ a:active {
 }
 
 
-/*=========================Media Query=============================*/
-
-/* Big tablet to 1200px (width smaller than the 1140px row)*/
-@media only screen and (max-width: 1200px){
-
-    a:first-of-type{
-        margin: 5% 0 0 4%;
-    }
-    .status div{
-        margin: 5vmin auto; 
-    }
-    .row1{
-        height: 90vmin; 
-        margin-top:4vmin; 
-    }
-}
-
-/*Small tablet to big tablet: from 768px to 1023px */
-@media only screen and (max-width: 1023px){
-    .top{
-        max-width: 100%;
-        width: 80%
-    }
-    a:first-of-type{
-        margin: 5% 0 0 2%;
-    }
-    .row1{
-        height: 60vmin; 
-    }
-
-    .status{
-        padding: 0 0.5%; 
-    }
-    .status div{
-        margin: 20% auto; 
-    }
-}
-
-
-/* Small phones to small tablets 481px to 767 px*/
-@media only screen and (max-width: 767px){
-    html{
-        overflow: hidden;
-
-    }
-    body{
-        height: 101vh;
-        width: 100vw;
-        overflow: hidden;
-        background-size: cover;
-        background-color: black;
-    }
-    header{
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 15%;
-        margin-bottom: 1%;
-    }
-    header .row div{
-        display: inline-block;
-
-    }
-    header .row div:first-child{
-        width: 20%;
-        height:100%
-    }
-    header .row div:nth-child(2){
-        width: 80%;
-    }
-    #logo {
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 0 2vw 2vw #250f22;
-        display: inline-block;
-        position: relative;
-
-    }
-    #main_title{
-        width: 62%;
-        margin-left: 10%;
-        margin-right: 0.8%;
-        height: 99%;
-    }
-    #title_frame{
-        width: 61%;
-        left: 11%;
-    }
-    a:link,
-    a:visited {
-        color: #e67e22;
-        text-decoration: none;
-        transition: border-bottom 0.2s, color 0.2s;
-        background-color: rgba(255,255,255,0.7);
-        border-radius: 5%;
-        padding: 5px;
-        font-family:'IM Fell English SC';
-        font-size: 1em;
-        width: auto;
-        display: inline-block;
-        margin: 2% 1% ;
-    }
-    .game_panel{
-        height: 88%;
-    }
-    .status{
-        padding: 5% 0.5%; 
-        font-size: 1em; 
-    }
-    .row1{
-        margin-top: 3vmin;  
-        height: 90%;
-    }
-    .card{
-        margin: 1% 1%; 
-    }
-    #pop-out{
-        bottom: 0%; 
-
-    }
-}
-
-/* Small phones: from 0 to 480px */
-@media only screen and (max-width: 480px){
-    html{
-        overflow: hidden;
-
-    }
-    body{
-        height: 101vh;
-        width: 100vw;
-        overflow: hidden;
-        background-size: 100% 50%;
-        background-color: black;
-    }
-    header{
-        display: block;
-        position: relative;
-        width: 100%;
-        height: 10%;
-    }
-    header .row div{
-        display: inline-block;
-
-    }
-    header .row div:first-child{
-        width: 20%;
-        height:100%
-    }
-    header .row div:nth-child(2){
-        width: 80%;
-    }
-    #logo {
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 0 2vw 2vw #250f22;
-        display: inline-block;
-        position: relative;
-
-    }
-    #main_title{
-        width: 62%;
-        margin-left: 10%;
-        margin-right: 0.8%;
-        height: 99%;
-    }
-    #title_frame{
-        width: 60%;
-        left:12%;
-    }
-    a:link,
-    a:visited {
-        color: #e67e22;
-        text-decoration: none;
-        transition: border-bottom 0.2s, color 0.2s;
-        background-color: rgba(255,255,255,0.7);
-        border-radius: 5%;
-        padding: 5px;
-        font-family:'IM Fell English SC';
-        font-size: 3em;
-        width: 40%;
-        display: inline-block;
-        height: 40%; 
-        /* margin: 2% 13% ; */
-    }
-
-    .status{
-        background: rgba(241, 110, 206, 0.43);
-        width: 95%;
-        font-size: 2em;
-        position: relative;
-        text-align: center;
-        font-family:'IM Fell English SC';
-        display: block;
-        height: 30%;
-        margin-top: 2%;
-        padding: 4vmin 0 0 0 ; 
-        color: white; 
-    }
-    .status div{
-        display:inline-block; 
-        width: 49%; 
-        margin: 5% auto;
-    }
-    .status h2, h4, h5 {
-        font-size: 1.5em; 
-    }
-
-    .reset{
-        left: 50%;
-        margin: 0;
-        bottom: 3%;
-        position: absolute;
-        transform: translateX(-50%);
-        font-size: 2em;
-        height: 13%;
-
-    }
-    .game-area{
-        background: rgba(255, 255, 255, 0.7);
-        border-radius: 2.0%;
-        margin: 17% 0 0 0 ;
-        position: relative;
-        height: 59%;
-        padding: 0;
-        padding-top: 2%;
-        /* padding-left: 10%; */
-        width: 100%;
-        box-shadow: 0 0 20px 20px #636f7b;
-        display: block;
-    }
-    #pop-out{
-        position: fixed;
-        z-index: 1;
-        bottom: 51%;
-        height: 20%;
-        right: 7%;
-    }
-    .row1{
-        margin-top: 0;
-        height:90%; 
-    }
-    .card{
-        margin: 5% 1%; 
-        height: 25%; 
-    }
-    }
-    #rulesModal{
-        left:7vmax; 
-        width: 80%; 
-    }
-    #settingModal{
-        left: 10vmax;
-        top: 48vmin; 
-        width: 100%; 
-
-    }
-}
 
 
 
