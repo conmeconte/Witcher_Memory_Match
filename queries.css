@@ -36,6 +36,14 @@
     .ring>.card{
         height: 150%; 
     }
+    #settingModal .modal-content{
+        width: 50%;
+        height: 40%;
+    }
+    .modal-content a{
+        width: 80%; 
+    }
+    
 
 }
 
@@ -313,9 +321,11 @@
         width: 80%; 
     }
     #settingModal{
-        /* left: 10vmax; */
+        left: 50%;
         top: 50%; 
+        transform: translate(50% 50%); 
         width: 100%; 
+
 
     }
     #settingModal>.modal-content{
