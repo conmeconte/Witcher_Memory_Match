@@ -8,7 +8,10 @@ html {
     position: relative;
     font-size: 1em;
     font-family:'IM Fell English SC';
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 
 }
 
@@ -228,12 +231,15 @@ a:active {
     transition: all 0.5s ease-in-out 0s;
     -webkit-animation: cardBlink 2s ease-in-out infinite;
             animation: cardBlink 2s ease-in-out infinite;
-            animation-direction: alternate; 
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate; 
 }
 .card[gotit=true]:hover,
 .card[gotit=true]:active{
-    transform:none; 
-    animation:none; 
+    -webkit-transform:none;
+            transform:none; 
+    -webkit-animation:none; 
+            animation:none; 
 }
 
 @-webkit-keyframes cardBlink {
@@ -258,7 +264,8 @@ a:active {
 .match_card{
     -webkit-animation: cardBlink3 2s ease-in-out 4;
             animation: cardBlink3 2s ease-in-out 4;
-            animation-direction: alternate; 
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate; 
     -webkit-box-shadow: 0 0 20px 10px #ff191e;
             box-shadow: 0 0 20px 10px #ff191e;
 }
