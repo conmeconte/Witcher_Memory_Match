@@ -46,23 +46,23 @@ header .row{
 }
 #main_title{
     height: 100%;
-    width: 57%;
-    margin-left: 13%;
+    width: 30%;
+    margin-left: 30%;
     background-color: rgba(255,255,255,0.7);
     -webkit-box-shadow: inset 0px 0px 20px 15px black;
             box-shadow: inset 0px 0px 20px 15px black;
 }
-#main_title::after{
+/* #main_title::after{
     content: url('img/Gwent_logo.png');
-}
-/* #title_frame{
+} */
+#title_frame{
     position: absolute;
-    width: 59%;
+    width: 31%;
     height: 127%;
-    left: 12%;
+    left: 29.5%;
     top: -10%;
     margin: 0;
-} */
+}
 a:link,
 a:visited {
     color: #e67e22;
@@ -99,8 +99,8 @@ a:active {
 #logo {
     width: 100%;
     height: 100%;
-    -webkit-box-shadow: 0 0 2% 2% #250f22;
-            box-shadow: 0 0 2% 2% #250f22;
+    box-shadow: 0px 0 10px 7px #1b1616;
+
 
 }
 #pop-out{
@@ -262,18 +262,18 @@ a:active {
 
 
 .match_card{
-    -webkit-animation: cardBlink3 2s ease-in-out 4;
-            animation: cardBlink3 2s ease-in-out 4;
+    -webkit-animation: cardBlink3 2s ease-in-out 2;
+            animation: cardBlink3 2s ease-in-out 2;
             -webkit-animation-direction: alternate;
                     animation-direction: alternate; 
-    -webkit-box-shadow: 0 0 20px 10px #ff191e;
-            box-shadow: 0 0 20px 10px #ff191e;
+    -webkit-box-shadow: 0 0 16px 4px #da2619;
+            box-shadow: 0 0 16px 4px #da2619;
 }
 
 
 @-webkit-keyframes cardBlink3 {
-    from {     -webkit-box-shadow: 0 0 20px 7px #ff191e;     box-shadow: 0 0 30px 15px #ff191e;}
-    to   {     -webkit-box-shadow: 0 0 2px 1px #fd9f24;     box-shadow: 0 0 2px 1px #ff1b30;}
+    from {     -webkit-box-shadow: 0 0 20px 7px #ff191e;     box-shadow: 0 0 15px 15px #d43912d7;}
+    to   {     -webkit-box-shadow: 0 0 2px 1px #fd9f24;     box-shadow: 0 0 2px 1px #ff821b;}
 }
 
 /*-----------------------------MODAL-------------------------------*/
