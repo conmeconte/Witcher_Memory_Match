@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <link rel="stylesheet" href="MasonSerif.ttf">
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="queries.css">
+        <link rel="stylesheet" type="text/css" href="sources/ionicons-2.0.1%20(1)/ionicons-2.0.1/css/ionicons.css">
+        <script src="https://use.fontawesome.com/c8ea31cdac.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+
+          <title>Memory Matching Game</title>
+    </head>
+    <body>
+    <header>
+        <div class="row">
+            <div class="col-md-2 col-sm-2">
+                <img src="img/logo2.gif" id="logo">
+            </div>
+            <div class="col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 top">
+                <div id='main_title'>
+                    <img src="img/Gwent_logo.png">
+                </div>
+
+                <a href="#" class="setting">Settings</a>
+                <a href="https://conmeconte.com" target="__blank">Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="game_panel">
+        <div class="row">
+            <div class="status">
+                <img src="img/frame.png" alt="" id="status_frame">
+                <h2>Status</h2>
+                <div class="games-played">
+                    <h4 class="label">Games Played</h4>
+                    <h5 class="value">-</h5>
+                </div>
+                <div class="attempts">
+                    <h4 class="label">Attempts</h4>
+                    <h5 class="value">-</h5>
+                </div>
+                <div class="accuracy">
+                    <h4 class="label">Accuracy</h4>
+                    <h5 class="value">-</h5>
+                </div>
+                <div class="points">
+                    <h4 class="label">Points</h4>
+                    <h5 class="value">-</h5>
+                </div>
+                <button class="reset">Reset Game</button>
+            </div>
+
+            <div class="game-area">
+                <img src="img/board.jpg" id="board">
+                <div class="row1">
+                    <div class="card one">
+                        <div class="front">
+                            <img src="img/Avallac'h.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card two">
+                        <div class="front">
+                            <img src="img/Torrential_Rain.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card three">
+                        <div class="front">
+                            <img src="img/Fringilla_Vigo.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card four">
+                        <div class="front">
+                            <img src="img/Triss;_Butterfly_Spell.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card five">
+                        <div class="front">
+                            <img src="img/Fake_Ciri.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card six">
+                        <div class="front">
+                            <img src="img/Avallac'h.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+
+
+                    <div class="card seven">
+                        <div class="front">
+                            <img src="img/Marching_Orders.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card eight">
+                        <div class="front">
+                            <img src="img/Eskel3.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card nine">
+                        <div class="front">
+                            <img src="img/Iris.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card ten">
+                        <div class="front">
+                            <img src="img/Geralt.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card eleven">
+                        <div class="front">
+                            <img src="img/Fake_Ciri.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card twelve">
+                        <div class="front">
+                            <img src="img/Triss;_Butterfly_Spell.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+
+                    <div class="card thirteen">
+                        <div class="front">
+                            <img src="img/Eskel3.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card fourteen">
+                        <div class="front">
+                            <img src="img/Marching_Orders.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card fifteen">
+                        <div class="front">
+                            <img src="img/Fringilla_Vigo.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card sixteen">
+                        <div class="front">
+                            <img src="img/Geralt.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card seventeen">
+                        <div class="front">
+                            <img src="img/Torrential_Rain.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                    <div class="card eighteen">
+                        <div class="front">
+                            <img src="img/Iris.gif">
+                        </div>
+                        <div class="back">
+                            <img src="https://i.pinimg.com/originals/58/17/85/581785ed38d3e41c25a22163c845abec.jpg">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section>
+
+        <!-- The Modal -->
+        <div id="winModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>You Win!</h2>
+                <div class="games-played">
+                    <h4 class="label">Games Played</h4>
+                    <h5 class="value">-</h5>
+                </div>
+                <div class="attempts">
+                    <h4 class="label">Attempts</h4>
+                    <h5 class="value">-</h5>
+                </div>
+                <div class="accuracy">
+                    <h4 class="label">Accuracy</h4>
+                    <h5 class="value">-</h5>
+                </div>
+            </div>
+
+        </div>
+        <div id="rulesModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Game Rules</h2>
+                <div>
+                    <h4>There are 9 pairs of matching cards.</h4>
+                    <h4>Try to match them.</h4>
+                </div>
+            </div>
+
+        </div>
+        <div id="settingModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Settings</h2>
+                <a href="#" class="sounds">Music &nbsp; &nbsp;<i class="fa fa-volume-off" aria-hidden="true"></i></a>
+                <a href="https://conmeconte.com">My portfolio</a>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="sound">
+        <audio id="ost">
+            <source src="sound/01%20Adam%20Skorupa%20-%20'Tales%20of%20The%20Witcher'.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    <img src="img/pop-out.PNG" id="pop-out">
+    <script src='cardFiles.js'></script>
+    </body>
+</html>
