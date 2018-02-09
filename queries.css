@@ -324,7 +324,7 @@
         display: block;
     }
     #pop-out{
-        position: fixed;
+        position: absolute;
         z-index: 1;
         bottom: 51%;
         height: 20%;
