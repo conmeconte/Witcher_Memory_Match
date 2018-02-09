@@ -138,7 +138,7 @@ a:active {
     background: rgba(241, 110, 206, 0.43);
     width: auto;
     font-size: 100%;
-    padding: 3% 0.5%;
+    padding: 5% 0.5%;
     position: relative;
     margin-left: 3%;
     text-align: center;
@@ -149,14 +149,14 @@ a:active {
 }
 
 .status::after{
-    background-image: url('img/frame.png');
-    background-size: 101% 110%; 
+    background-image: url('img/frame2.png');
+    background-size: 101% 100%; 
     content: " ";
     position: absolute;
-    top: -7%;
-    left: -3%;
-    height: 110%;
-    width: 105%; 
+    top: -3%;
+    left: -15%;
+    height: 106%;
+    width: 120%; 
 }
 
 .status>h2{
@@ -228,6 +228,10 @@ a:active {
     margin-top:1vmin; 
 }
 
+.row1.ring>.card:hover{
+    /* cursor: none;  */
+    animation:none; 
+}
 
 .card {
     display: inline-block;

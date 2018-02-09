@@ -19,12 +19,16 @@
     }
     .status{
         width: 15%; 
+        padding: 15% 0.5%;
+    }
+    .status h2{
+        font-size: 3vmin; 
     }
     .status div{
         margin: 5vmin auto; 
     }
-    .status h2, h4, h5{
-        font-size: 1.5vmin; 
+    .status h4, h5{
+        font-size: 2vmin; 
     }
     .row1{
         height: 90%; 
@@ -59,15 +63,22 @@
     }
     .row1{
         height: 90%;
+        margin-top:10%; 
     }
     .game-area{
         margin-left:2%; 
     }
 
     .status{
-        /* padding: 0 0.5%;  */
+        padding: 15% 0; 
         margin: 0;
         width: 20%; 
+    }
+    .status h2{
+        font-size:3vmin; 
+    } 
+    .status h4, h5{
+        font-size: 2vmin; 
     }
     .status div{
         margin: 20% auto; 
@@ -157,6 +168,9 @@
     }
     .status>div{
         margin: 10% auto; 
+    }
+    .reset{
+        height: 10%;
     }
     .row1{
         margin-top: 3vmin;  
@@ -266,6 +280,14 @@
         padding: 4vmin 0 0 0 ; 
         color: white; 
     }
+    .status::after{
+        background-image: url('img/frame.png');
+        background-size: 100% 111%; 
+        top: -7%;
+        left: -3%;
+        height: 110%;
+        width: 106%; 
+    }
     .status div{
         display:inline-block; 
         width: 49%; 
@@ -281,7 +303,7 @@
     .reset{
         left: 50%;
         margin: 0;
-        bottom: 3%;
+        bottom: 10%;
         position: absolute;
         transform: translateX(-50%);
         /* font-size: 2em; */

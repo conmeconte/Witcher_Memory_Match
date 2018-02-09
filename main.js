@@ -3,6 +3,9 @@ $(document).ready(function() {
     shuffleCard2(frontCardArray2);
     checkSoundOption(); 
     $('.card').click(function () {
+        if($('.row1').hasClass('ring')){
+            return; 
+        }
         card_clicked(this);
         display_stats();
         var settingClick= new Audio();
