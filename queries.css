@@ -32,8 +32,10 @@
         font-size: 2vmin; 
     }
     .row1{
-        height: 80%; 
-        margin-top:8%; 
+        height: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top:0; 
     }
     .ring{
         height: 25%; 
@@ -64,7 +66,9 @@
     }
     .row1{
         height: 80%;
-        margin-top:10%; 
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top:0; 
     }
     .game-area{
         margin-left:2%; 
@@ -174,12 +178,12 @@
         height: 10%;
     }
     .row1{
-        margin-top: 2%;  
-        height: 70%;
+        margin-top: 0%;  
+        height: 80%;
         width:80%; 
     }
     .card{
-        margin: 5% 1%; 
+        margin: 3% 1%; 
         height:25%; 
     }
     #pop-out{
