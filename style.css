@@ -188,7 +188,8 @@ a:active {
 }
 
 .game-area{
-    background: rgba(255, 255, 255, 0.7);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(72, 57, 57, 0.22)), url('img/board.jpg');
+    background-size: cover; 
     margin-left: 5%;
     position: relative;
     height: 90%;
@@ -250,8 +251,7 @@ a:active {
     cursor: pointer;
 
 }
-.card:hover,
-.card:active {
+.card.hover {
     -webkit-transform: scale(1.2) rotate(360deg);
     border:2px solid rgba(0,160,80,0);
     -webkit-transition: all 0.5s ease-in-out 0s;
@@ -261,6 +261,7 @@ a:active {
             -webkit-animation-direction: alternate;
                     animation-direction: alternate; 
 }
+
 .card[gotit=true]:hover,
 .card[gotit=true]:active{
     -webkit-transform:none;

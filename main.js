@@ -13,10 +13,15 @@ $(document).ready(function() {
         settingClick.play();
     });
     $('.card').on('mouseenter', function() {
-        var settingClick= new Audio();
-        settingClick.volume = 0.4;
-        settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
-        settingClick.play();
+        if(!this.classList.contains("hover")){
+            this.classList.add("hover"); 
+            var settingClick= new Audio();
+            settingClick.volume = 0.4;
+            settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
+            settingClick.play();
+            setTimeout(()=>{this.classList.remove("hover")}, 2000); 
+        }
+
     });
 
     $('.reset').click(function () {
@@ -178,6 +183,7 @@ $(document).ready(function() {
 
     }
 
+ 
     //-----------------------------------------MODAL-----------------------------------------------------------------------/
 
 
