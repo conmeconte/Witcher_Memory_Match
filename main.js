@@ -13,13 +13,13 @@ $(document).ready(function() {
         settingClick.play();
     });
     $('.card').on('mouseenter', function() {
-        if(!this.classList.contains("hover")){
+        if(!this.classList.contains("hover") && !this.hasAttribute("gotit")){
             this.classList.add("hover"); 
             var settingClick= new Audio();
             settingClick.volume = 0.4;
             settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
             settingClick.play();
-            setTimeout(()=>{this.classList.remove("hover")}, 2000); 
+            setTimeout(()=>{this.classList.remove("hover")}, 1000); 
         }
 
     });
