@@ -139,7 +139,7 @@ a:active {
     background: rgba(241, 110, 206, 0.43);
     width: auto;
     font-size: 100%;
-    padding: 5% 0.5%;
+    padding: 5% 0.5% 0 0.5%;
     position: relative;
     margin-left: 3%;
     text-align: center;
@@ -148,6 +148,11 @@ a:active {
     height: 85%;
     color: white; 
 }
+/* .status>*{
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+} */
 
 .status::after{
     background-image: url('img/frame2.png');
@@ -212,7 +217,6 @@ a:active {
             box-shadow: inset 0 0 0px 0px #22303e;
 }
 
-
 #board{
     opacity: 0.6;
 }
@@ -269,6 +273,7 @@ a:active {
 
 .card[gotit=true]:hover,
 .card[gotit=true]:active{
+    cursor: default; 
     -webkit-transform:none;
             transform:none; 
     -webkit-animation:none; 
@@ -401,7 +406,13 @@ a:active {
 
 }
 .modal-content>a{
-    margin-top: 10px; 
+    margin:0; 
+    margin-top: 10px;
+    width: 60%; 
+    border-radius: 0; 
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
 }
 /* The Close Button */
 .close {

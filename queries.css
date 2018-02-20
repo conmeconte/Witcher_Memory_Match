@@ -23,6 +23,7 @@
     }
     .status h2{
         font-size: 3vmin; 
+        margin-bottom: 10%; 
     }
     .status div{
         margin: 5vmin auto; 
@@ -173,11 +174,13 @@
         height: 10%;
     }
     .row1{
-        margin-top: 10%;  
+        margin-top: 2%;  
         height: 70%;
+        width:80%; 
     }
     .card{
-        margin: 1% 1%; 
+        margin: 5% 1%; 
+        height:25%; 
     }
     #pop-out{
         bottom: 0%; 
@@ -188,6 +191,9 @@
     }
     #settingModal a{
         width: 100%; 
+    }
+    .modal-content{
+        top: 21%; 
     }
     #rulesModal{
         height: 60%; 
@@ -264,9 +270,9 @@
         /* margin: 2% 13% ; */
     }
 
-    .modal-content a{
+    /* .modal-content a{
         width:100%; 
-    }
+    } */
     .status{
         background: rgba(241, 110, 206, 0.43);
         width: 100%;
