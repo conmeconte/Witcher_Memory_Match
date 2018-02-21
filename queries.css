@@ -367,6 +367,8 @@
     }
     .ring{
         height: 25%; 
+        top: 25%; 
+        left: 10%; 
     }
     .ring>.card{
         height: 150%; 
