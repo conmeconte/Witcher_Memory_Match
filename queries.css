@@ -98,7 +98,7 @@
 
 
 /* Small phones to small tablets 481px to 767 px*/
-/* @media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px){
     html{
         overflow: hidden;
 
@@ -107,15 +107,17 @@
         height: 101vh;
         width: 100vw;
         overflow: hidden;
-        background-size: cover;
+        /* background-size: cover; */
+        background-size: 100% 50%;
         background-color: black;
     }
     header{
         display: block;
         position: relative;
         width: 100%;
-        height: 15%;
-        margin-bottom: 1%;
+        /* height: 15%; */
+        height: 10%;
+        /* margin-bottom: 1%; */
     }
     header .row div{
         display: inline-block;
@@ -155,7 +157,8 @@
         border-radius: 5%;
         font-family:'IM Fell English SC';
         font-size: 0.5em;
-        width: 10%;
+        /* width: 10%; */
+        width: 40%;
         display: inline-block;
         margin: 2% 1% ;
         padding: 1% 1%; 
@@ -164,22 +167,67 @@
         height: 88%;
     }
     .status{
-        padding: 3% 0.5%; 
         font-size: 0.8em; 
         color: white; 
+        background: rgba(241, 110, 206, 0.43);
+        width: 100%;
+        position: relative;
+        text-align: center;
+        font-family:'IM Fell English SC';
+        display: block;
+        height: 30%;
+        margin-top: 2%;
+        padding: 1vmin 0 0 0 ; 
+    }
+    .status::after{
+        background-image: url('img/frame.png');
+        background-size: 100% 111%; 
+        top: -7%;
+        left: -3%;
+        height: 110%;
+        width: 106%; 
     }
     .status>h2{
         margin-bottom: 0%; 
     }
     .status>div{
-        margin: 10% auto; 
+        /* margin: 10% auto;  */
+        display:inline-block; 
+        width: 49%; 
+        margin: 5% auto;
     }
     .reset{
-        height: 10%;
+        /* height: 10%; */
+        left: 50%;
+        margin: 0;
+        bottom: 10%;
+        position: absolute;
+        transform: translateX(-50%);
+        height: 13%;
+    }
+    .game-area{
+        border-radius: 2.0%;
+        margin: 3% 0 0 0 ;
+        position: relative;
+        height: 59%;
+        padding: 0;
+        padding-top: 2%;
+        /* padding-left: 10%; */
+        width: 100%;
+        box-shadow: 0 0 20px 20px #636f7b;
+        display: block;
+    }
+    #pop-out{
+        position: absolute;
+        z-index: 1;
+        bottom: 51%;
+        height: 20%;
+        right: 7%;
     }
     .row1{
         margin-top: 0%;  
-        height: 80%;
+        /* height: 80%; */
+        height: 90%;
         width:80%; 
     }
     .card{
@@ -208,57 +256,57 @@
     .ring>.card{
         height: 150%; 
     }
-} */
+}
 
 /* Small phones: from 0 to 480px */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 480px){
     html{
         overflow: hidden;
 
     }
     body{
-        height: 101vh;
+        /* height: 101vh;
         width: 100vw;
-        overflow: hidden;
+        overflow: hidden; */
         background-size: 100% 50%;
         background-color: black;
     }
     header{
         display: block;
         position: relative;
-        width: 100%;
+        /* width: 100%; */
         height: 10%;
     }
-    header .row div{
+    /* header .row div{
         display: inline-block;
 
-    }
-    header .row div:first-child{
+    } */
+    /* header .row div:first-child{
         width: 20%;
         height:100%
-    }
-    header .row div:nth-child(2){
+    } */
+    /* header .row div:nth-child(2){
         width: 80%;
-    }
-    #logo {
+    } */
+    /* #logo {
         width: 100%;
         height: 100%;
         box-shadow: 0 0 2vw 2vw #250f22;
         display: inline-block;
         position: relative;
 
-    }
-    #main_title{
+    } */
+    /* #main_title{
         width: 62%;
         margin-left: 10%;
         margin-right: 0.8%;
         height: 99%;
-    }
+    } */
     #title_frame{
         width: 60%;
         left:12%;
     }
-    a:link,
+    /* a:link,
     a:visited {
         color: #e67e22;
         text-decoration: none;
@@ -267,12 +315,10 @@
         border-radius: 5%;
         padding: 1%;
         font-family:'IM Fell English SC';
-        /* font-size: 3em; */
         width: 40%;
         display: inline-block;
         height: 40%; 
-        /* margin: 2% 13% ; */
-    }
+    } */
 
     /* .modal-content a{
         width:100%; 
@@ -280,7 +326,6 @@
     .status{
         background: rgba(241, 110, 206, 0.43);
         width: 100%;
-        /* font-size: 2em; */
         position: relative;
         text-align: center;
         font-family:'IM Fell English SC';
@@ -288,7 +333,6 @@
         height: 30%;
         margin-top: 2%;
         padding: 4vmin 0 0 0 ; 
-        color: white; 
     }
     .status::after{
         background-image: url('img/frame.png');
@@ -316,7 +360,6 @@
         bottom: 10%;
         position: absolute;
         transform: translateX(-50%);
-        /* font-size: 2em; */
         height: 13%;
 
     }
