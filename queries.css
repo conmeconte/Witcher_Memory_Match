@@ -11,7 +11,7 @@
     }
     a:link, a:visited{
         width: 20%; 
-        font-size:0.8em; 
+        font-size:1em; 
     }
     .game-area{
         margin-left:2%; 
@@ -98,7 +98,7 @@
 
 
 /* Small phones to small tablets 481px to 767 px*/
-@media only screen and (max-width: 767px){
+/* @media only screen and (max-width: 767px){
     html{
         overflow: hidden;
 
@@ -208,10 +208,10 @@
     .ring>.card{
         height: 150%; 
     }
-}
+} */
 
 /* Small phones: from 0 to 480px */
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 767px){
     html{
         overflow: hidden;
 
@@ -265,7 +265,7 @@
         transition: border-bottom 0.2s, color 0.2s;
         background-color: rgba(255,255,255,0.7);
         border-radius: 5%;
-        padding: 3%;
+        padding: 1%;
         font-family:'IM Fell English SC';
         /* font-size: 3em; */
         width: 40%;
@@ -344,7 +344,7 @@
         height:90%; 
     }
     .card{
-        margin: 5% 1%; 
+        margin: 2.5% 1%; 
         height: 25%; 
     }
     
