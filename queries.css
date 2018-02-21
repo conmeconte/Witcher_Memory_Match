@@ -95,10 +95,173 @@
         height: 150%; 
     }
 }
+/* Small phones to small tablets 481px to 767 px */
+@media only screen and (max-width: 767px) and (orientation: portrait){
+    html{
+        overflow: hidden;
 
+    }
+    body{
+        height: 101vh;
+        width: 100vw;
+        overflow: hidden;
+        /* background-size: cover; */
+        background-size: 100% 50%;
+        background-color: black;
+    }
+    header{
+        display: block;
+        position: relative;
+        width: 100%;
+        /* height: 15%; */
+        height: 10%;
+        /* margin-bottom: 1%; */
+    }
+    header .row div{
+        display: inline-block;
 
-/* Small phones to small tablets 481px to 767 px*/
-/* @media only screen and (max-width: 767px){
+    }
+    header .row div:first-child{
+        width: 20%;
+        height:100%
+    }
+    header .row div:nth-child(2){
+        width: 80%;
+    }
+    #logo {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 2vw 2vw #250f22;
+        display: inline-block;
+        position: relative;
+
+    }
+    #main_title{
+        width: 62%;
+        margin-left: 10%;
+        margin-right: 0.8%;
+        height: 99%;
+    }
+    #title_frame{
+        width: 61%;
+        left: 11%;
+    }
+    a:link,
+    a:visited {
+        color: #e67e22;
+        text-decoration: none;
+        transition: border-bottom 0.2s, color 0.2s;
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 5%;
+        font-family:'IM Fell English SC';
+        font-size: 1.5em;
+        /* width: 10%; */
+        width: 40%;
+        display: inline-block;
+        margin: 2% 1% ;
+        padding: 1% 1%; 
+    }
+    .game_panel{
+        height: 88%;
+    }
+    .status{
+        font-size: 0.8em; 
+        color: white; 
+        background: rgba(241, 110, 206, 0.43);
+        width: 100%;
+        position: relative;
+        text-align: center;
+        font-family:'IM Fell English SC';
+        display: block;
+        height: 30%;
+        margin-top: 2%;
+        padding: 1vmin 0 0 0 ; 
+        z-index:1; 
+    }
+    .status::after{
+        background-image: url('img/frame.png');
+        background-size: 100% 111%; 
+        top: -7%;
+        left: -3%;
+        height: 110%;
+        width: 106%; 
+    }
+    .status>h2{
+        margin-bottom: 0%; 
+    }
+    .status>div{
+        /* margin: 10% auto;  */
+        display:inline-block; 
+        width: 49%; 
+        margin: 5% auto;
+    }
+    .reset{
+        left: 50%;
+        margin: 0;
+        bottom: 10%;
+        position: absolute;
+        transform: translateX(-50%);
+        height: 13%;
+        font-size: 2em;
+    }
+    .game-area{
+        border-radius: 2.0%;
+        margin: 3% 0 0 0 ;
+        position: relative;
+        height: 59%;
+        padding: 0;
+        padding-top: 2%;
+        /* padding-left: 10%; */
+        width: 100%;
+        box-shadow: 0 0 20px 20px #636f7b;
+        display: block;
+    }
+    #pop-out{
+        position: absolute;
+        z-index: 1;
+        bottom: 51%;
+        height: 20%;
+        right: 7%;
+    }
+    .row1{
+        margin-top: 0%;  
+        height: 90%;
+        width:80%; 
+    }
+    .ring{
+        top: 25%; 
+    }
+    .card{
+        margin: 3% 1%; 
+        height:25%; 
+    }
+    #pop-out{
+        right: 0; 
+    }
+    #settingModal{
+        height: 75%;
+    }
+    #settingModal a{
+        width: 100%; 
+    }
+    .modal-content{
+        top: 21%; 
+    }
+    #rulesModal{
+        height: 60%; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .ring{
+        height: 25%; 
+    }
+    .ring>.card{
+        height: 150%; 
+    }
+}
+/* Small phones to small tablets on portrait mode 481px to 767 px*/
+@media only screen and (max-width: 767px) and (orientation: landscape){
     html{
         overflow: hidden;
 
@@ -208,10 +371,10 @@
     .ring>.card{
         height: 150%; 
     }
-} */
+}
 
 /* Small phones: from 0 to 480px */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 480px){
     html{
         overflow: hidden;
 
@@ -365,6 +528,8 @@
     }
     .ring{
         height: 25%; 
+        left:0; 
+
     }
     .ring>.card{
         height: 150%; 
