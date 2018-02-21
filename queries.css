@@ -430,7 +430,7 @@
         border-radius: 5%;
         padding: 1%;
         font-family:'IM Fell English SC';
-        /* font-size: 3em; */
+        font-size: 1em;
         width: 40%;
         display: inline-block;
         height: 40%; 
@@ -443,7 +443,7 @@
     .status{
         background: rgba(241, 110, 206, 0.43);
         width: 100%;
-        /* font-size: 2em; */
+        font-size: 1em;
         position: relative;
         text-align: center;
         font-family:'IM Fell English SC';
@@ -479,7 +479,7 @@
         bottom: 10%;
         position: absolute;
         transform: translateX(-50%);
-        /* font-size: 2em; */
+        font-size: 1em;
         height: 13%;
 
     }
