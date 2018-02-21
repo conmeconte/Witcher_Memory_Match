@@ -97,6 +97,9 @@
     .ring>.card{
         height: 150%; 
     }
+    #pop-out{
+        bottom: -10%;
+    }
 }
 /* Small phones to small tablets 481px to 767 px */
 @media only screen and (max-width: 767px) and (orientation: portrait){
@@ -361,6 +364,9 @@
     }
     #pop-out{
         bottom: 0%; 
+        width: auto;
+        height: 30%; 
+        right: 1%; 
 
     }
     #settingModal{
@@ -371,6 +377,10 @@
     }
     .modal-content{
         top: 21%; 
+    }
+    .modal-content h2,
+    .modal-content h4{
+        font-size: 12px; 
     }
     #rulesModal{
         height: 60%; 
@@ -528,7 +538,6 @@
     }
     
     #rulesModal{
-        left:7vmax; 
         width: 80%; 
     }
     #settingModal{
