@@ -4,7 +4,7 @@ function View(controller){
 
     this.init = function(){
         $('.card').click(function () {
-            if($('.row1').hasClass('ring')){
+            if($('.card_row').hasClass('ring')){
                 return; 
             }
             this.controller.model.card_clicked(this);
@@ -16,40 +16,40 @@ function View(controller){
         $('.card').on('mouseenter', function() {
             if(!this.classList.contains("hover") && !this.hasAttribute("gotit")){
                 this.classList.add("hover"); 
-                var settingClick= new Audio();
-                settingClick.volume = 0.4;
-                settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
-                settingClick.play();
+                this.settingClick= new Audio();
+                this.settingClick.volume = 0.4;
+                this.settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
+                this.settingClick.play();
                 setTimeout(()=>{this.classList.remove("hover")}, 1000); 
             }
     
         });
     
         $('.reset').click(function () {
-            games_played++;
-            reset_stats();
-            display_stats();
-            $('.row1').addClass('ring');
-            $('.row2').addClass('ring');
-            $('.row3').addClass('ring');
-            bouncer=false;
-            setTimeout(removeRow, 5000);
+            this.controller.model.games_played++;
+            this.controller.reset_stats();
+            this.controller.display_stats();
+            $('.card_row').addClass('ring');
+            this.controller.model.bouncer=false;
+            setTimeout(this.controller.removeRow, 5000);
             setTimeout(()=>{
-                shuffleCard2(frontCardArray2);
-                bouncer=true; 
+                this.controller.model.shuffleCard(this.controller.cards);
+                this.controller.model.bouncer=true; 
             }, 6000);
             $('.card').removeClass('hidden');
-            var settingClick= new Audio();
-            settingClick.src = "sound/AdventurePanel_down.ogg";
-            settingClick.play();
-            var settingClick2= new Audio();
-            settingClick2.src = "sound/crafting_create_card_start.ogg";
-            settingClick2.play();
+            this.settingClick= new Audio();
+            this.settingClick.src = "sound/AdventurePanel_down.ogg";
+            this.settingClick.play();
+            this.settingClick2= new Audio();
+            this.settingClick2.src = "sound/crafting_create_card_start.ogg";
+            this.settingClick2.play();
             $('.card').removeClass('match_card');
-        });
+        }.bind(this));
+
         $('.close').click(function () {
             $('.modal').css({display: 'none'});
         });
+
         $(window).click(function () {
             if ($('.modal').css('display') === 'block') {
                 $('.modal').css({display: 'none'});
@@ -67,7 +67,7 @@ function View(controller){
             this.settingClick.play();
         }.bind(this));
     
-        $('.sounds').on('click', this.controller.togglePlay);
+        $('.sounds').on('click', this.controller.togglePlay.bind(this));
 
     }
 

@@ -1,5 +1,6 @@
 function Controller(cardArray){
         this.controller= this; 
+        this.cards= cardArray; 
 
 
     this.initialize= () => {
@@ -56,15 +57,13 @@ function Controller(cardArray){
         }
     }
     this.removeRow= () => {
-        $('.row1').removeClass('ring');
-        $('.row2').removeClass('ring');
-        $('.row3').removeClass('ring');
+        $('.card_row').removeClass('ring');
     }
 
     this.togglePlay= () => {
         if (this.model.isPlaying) {
             $('#ost')[0].pause();
-            isPlaying = false;
+            this.model.isPlaying = false;
             $("i").remove();
             $('.sounds').append(this.model.$soundOff);
             localStorage.setItem('music', 'off');

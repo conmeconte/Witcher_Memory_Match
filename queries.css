@@ -31,7 +31,7 @@
     .status h4, h5{
         font-size: 2vmin; 
     }
-    .row1{
+    .card_row{
         height: 80%;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -65,7 +65,7 @@
     a:first-of-type{
         margin: 5% 0 0 2%;
     }
-    .row1{
+    .card_row{
         height: 80%;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -233,7 +233,7 @@
         height: 20%;
         right: 7%;
     }
-    .row1{
+    .card_row{
         margin-top: 0%;  
         height: 90%;
         width:80%; 
@@ -353,7 +353,7 @@
     .reset{
         height: 10%;
     }
-    .row1{
+    .card_row{
         margin-top: 0%;  
         height: 80%;
         width:80%; 
@@ -529,7 +529,7 @@
         height: 20%;
         right: 7%;
     }
-    .row1{
+    .card_row{
         margin-top: 0;
         height:90%; 
     }

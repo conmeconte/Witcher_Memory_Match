@@ -223,7 +223,7 @@ a:active {
 
 
 
-.row1{
+.card_row{
     display:block;
     position: relative;
     width: 80%;
@@ -237,7 +237,7 @@ a:active {
     margin-top:1vmin; 
 }
 
-.row1.ring>.card:hover{
+.card_row.ring>.card:hover{
     /* cursor: none;  */
     -webkit-animation:none;
             animation:none; 

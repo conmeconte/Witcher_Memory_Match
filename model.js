@@ -31,7 +31,6 @@ function Model(controller){
 
     
     this.createCards= () => {
-        console.log('model createcard')
         for(var i=1; i<=frontCardArray.length*2; i++){
             
             const cardImgFront= $('<img>')
@@ -44,7 +43,7 @@ function Model(controller){
             back.append(cardImgBack);
             card.append(front, back); 
 
-            $('.row1').append(card)
+            $('.card_row').append(card)
 
         }
 
