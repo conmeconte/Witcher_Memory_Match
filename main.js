@@ -69,6 +69,8 @@ $(document).ready(function() {
     $('.sounds').on('click', togglePlay);
 
 });
+/*========================MVC===============================================*
+
 
 /*========================Global Variables===============================================*/
 
@@ -261,3 +263,5 @@ function checkSoundOption(){
         togglePlay(); 
     }
 }
+
+
