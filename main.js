@@ -1,5 +1,6 @@
 
 $(document).ready(function() {
+    createCards()
     shuffleCard2(frontCardArray2);
     checkSoundOption(); 
     $('.card').click(function () {
@@ -69,8 +70,18 @@ $(document).ready(function() {
     $('.sounds').on('click', togglePlay);
 
 });
-/*========================MVC===============================================*
+/*========================MVC===============================================*/
 
+
+var Controller= (cardArray) => {
+
+}
+
+var Model = () => {
+
+}
+var View = () => {
+}
 
 /*========================Global Variables===============================================*/
 
@@ -89,7 +100,25 @@ $(document).ready(function() {
     var isPlaying= false;
 
 
+    function createCards(){
+        for(var i=1; i<=frontCardArray2.length*2; i++){
+            
+            const cardImgFront= $('<img>')
+            const cardImgBack= $('<img>')
+            const front= $('<div>').addClass("front")
+            const back= $('<div>').addClass("back")
+            const card= $('<div>').addClass(`card num${i}`)
 
+            front.append(cardImgFront);
+            back.append(cardImgBack);
+            card.append(front, back); 
+
+            $('.row1').append(card)
+
+        }
+
+
+    }
 
     function shuffleCard2(cards){
         var cardArrayCopy=[cards.slice(), cards.slice()];

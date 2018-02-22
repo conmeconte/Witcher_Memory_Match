@@ -291,10 +291,15 @@ a:active {
     from {     -webkit-box-shadow: 0 0 30px 15px #6853ff;     box-shadow: 0 0 30px 15px #6853ff;}
     to   {     -webkit-box-shadow: 0 0 2px 1px #593bff;     box-shadow: 0 0 2px 1px #593bff;}
 }
-
+    
+.back>img{
+    background: url('./img/back.jpg') no-repeat;
+    background-size: 100% 100%; 
+}
 
 .hidden .back {
     visibility: hidden;
+    background-size: 100% 100%;
 
 }
 
@@ -485,51 +490,51 @@ a:active {
     top: 20%;
 }
 
-.ring > .one {
+.ring > .num1 {
     -webkit-transform: translateZ(20vmax);
 }
 
-.ring > .two {
+.ring > .num2 {
     -webkit-transform: rotateY(20deg) translateZ(20vmax);
 }
 
-.ring > .three {
+.ring > .num3 {
     -webkit-transform: rotateY(40deg) translateZ(20vmax);
 }
 
-.ring > .four {
+.ring > .num4 {
     -webkit-transform: rotateY(60deg) translateZ(20vmax);
 }
 
-.ring > .five {
+.ring > .num5 {
     -webkit-transform: rotateY(80deg) translateZ(20vmax);
 }
 
-.ring > .six {
+.ring > .num6 {
     -webkit-transform: rotateY(100deg) translateZ(20vmax);
-}.ring > .seven {
+}.ring > .num7 {
     -webkit-transform: rotateY(120deg) translateZ(20vmax);
-}.ring > .eight {
+}.ring > .num8 {
     -webkit-transform: rotateY(140deg) translateZ(20vmax);
-}.ring > .nine {
+}.ring > .num9 {
     -webkit-transform: rotateY(160deg) translateZ(20vmax);
-}.ring > .ten {
+}.ring > .num10 {
     -webkit-transform: rotateY(180deg) translateZ(20vmax);
-}.ring > .eleven {
+}.ring > .num11 {
     -webkit-transform: rotateY(200deg) translateZ(20vmax);
-}.ring > .twelve {
+}.ring > .num12 {
     -webkit-transform: rotateY(220deg) translateZ(20vmax);
-}.ring > .thirteen {
+}.ring > .num13 {
     -webkit-transform: rotateY(240deg) translateZ(20vmax);
-}.ring > .fourteen {
+}.ring > .num14 {
     -webkit-transform: rotateY(260deg) translateZ(20vmax);
-}.ring > .fifteen {
+}.ring > .num16 {
     -webkit-transform: rotateY(280deg) translateZ(20vmax);
-}.ring > .sixteen {
+}.ring > .num17 {
     -webkit-transform: rotateY(300deg) translateZ(20vmax);
-}.ring > .seventeen {
+}.ring > .num18 {
     -webkit-transform: rotateY(320deg) translateZ(20vmax);
-}.ring > .eighteen {
+}.ring > .num19 {
     -webkit-transform: rotateY(340deg) translateZ(20vmax);
 }
 
