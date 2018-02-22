@@ -1,4 +1,4 @@
-var frontCardArray2=[
+var frontCardArray=[
     {
         src: "img/Avallac'h.gif",
         power: 10,
