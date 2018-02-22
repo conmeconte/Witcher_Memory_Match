@@ -1,7 +1,5 @@
 function Model(controller){
     this.controller= controller;
-    
-
     this.first_card_clicked= null;
     this.second_card_clicked = null;
     this.total_possible_matches=9;
@@ -63,62 +61,62 @@ function Model(controller){
             }
         }
     }
-
+    
     this.card_clicked = (obj) => {
-        if(bouncer && !$(obj).attr('gotit')) {
-            bouncer = false;
-            if (!first_card_clicked) {
-                first_card_clicked = obj;
-                $(first_card_clicked).addClass('hidden');
-                bouncer = true;
-                $(first_card_clicked).attr('gotit', true);
+        if(this.bouncer && !$(obj).attr('gotit')) {
+            this.bouncer = false;
+            if (!this.first_card_clicked) {
+                this.first_card_clicked = obj;
+                $(this.first_card_clicked).addClass('hidden');
+                this.bouncer = true;
+                $(this.first_card_clicked).attr('gotit', true);
 
             } else {
-                second_card_clicked = obj;
-                attempt++;
-                $(second_card_clicked).addClass('hidden');
-                var first_card_attr=$(first_card_clicked).find(".front img").attr('src');
-                var second_card_attr=$(second_card_clicked).find(".front img").attr('src');
-                if (first_card_attr === second_card_attr) {
-                    match_counter++;
-                    var points= $(second_card_clicked).find(".front img").attr('power');
-                    game_points+= parseInt(points);
-                    $(second_card_clicked).attr('gotit', true);
-                    $(first_card_clicked).addClass('match_card');
-                    $(second_card_clicked).addClass('match_card');
-                    first_card_clicked = null;
-                    second_card_clicked = null;
-                    matches++;
-                    if (match_counter === total_possible_matches) {
-                        setTimeout(openModal,1000);
+                this.second_card_clicked = obj;
+                this.attempt++;
+                $(this.second_card_clicked).addClass('hidden');
+                this.first_card_attr=$(this.first_card_clicked).find(".front img").attr('src');
+                this.second_card_attr=$(this.second_card_clicked).find(".front img").attr('src');
+                if (this.first_card_attr === this.second_card_attr) {
+                    this.match_counter++;
+                    this.points= $(this.second_card_clicked).find(".front img").attr('power');
+                    this.game_points+= parseInt(this.points);
+                    $(this.second_card_clicked).attr('gotit', true);
+                    $(this.first_card_clicked).addClass('match_card');
+                    $(this.second_card_clicked).addClass('match_card');
+                    this.first_card_clicked = null;
+                    this.second_card_clicked = null;
+                    this.matches++;
+                    if (this.match_counter === this.total_possible_matches) {
+                        setTimeout(this.controller.openModal,1000);
 
                     } else {
-                        var settingClick= new Audio();
-                        settingClick.src = "sound/Shared_FangImpact02GoldDeath_PreCast_1.ogg";
-                        settingClick.play();
+                        this.settingClick= new Audio();
+                        this.settingClick.src = "sound/Shared_FangImpact02GoldDeath_PreCast_1.ogg";
+                        this.settingClick.play();
 
-                        bouncer=true;
+                        this.bouncer=true;
                         return
                     }
                 } else {
-                    setTimeout(delay, 2000);
+                    setTimeout(this.delay, 2000);
                     $('.card').addClass('spinner');
-                    var settingClick= new Audio();
-                    settingClick.src = "sound/EX1_573t Treant_EnterPlay1.ogg";
-                    settingClick.play();
-                    $(second_card_clicked).removeAttr('gotit');
-                    $(first_card_clicked).removeAttr('gotit');
-                    this.delay= () => {
-                        $(first_card_clicked).removeClass('hidden');
-                        $(second_card_clicked).removeClass('hidden');
-                        $('.card').removeClass('spinner');
-                        first_card_clicked = null;
-                        second_card_clicked = null;
-                        bouncer = true;
-                    }
+                    this.settingClick= new Audio();
+                    this.settingClick.src = "sound/EX1_573t Treant_EnterPlay1.ogg";
+                    this.settingClick.play();
+                    $(this.second_card_clicked).removeAttr('gotit');
+                    $(this.first_card_clicked).removeAttr('gotit');
                     return;
                 }
             }
         }
     };
+    this.delay = () => {
+        $(this.first_card_clicked).removeClass('hidden');
+        $(this.second_card_clicked).removeClass('hidden');
+        $('.card').removeClass('spinner');
+        this.first_card_clicked = null;
+        this.second_card_clicked = null;
+        this.bouncer = true;
+    }
 }

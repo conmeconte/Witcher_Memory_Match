@@ -11,24 +11,85 @@ function Controller(cardArray){
         this.model.createCards()
         this.model.shuffleCard(cardArray);
         this.checkSoundOption(); 
+
+        $('.card').click(this.handleCardClicked.bind(this));
+        $('.card').on('mouseenter', this.handleMouseEnter.bind(this));
+    
+        $('.reset').click(function () {
+            this.model.games_played++;
+            this.reset_stats();
+            this.view.display_stats();
+            $('.card_row').addClass('ring');
+            this.model.bouncer=false;
+            setTimeout(this.controller.removeRow, 5000);
+            setTimeout(()=>{
+                this.model.shuffleCard(this.controller.cards);
+                this.model.bouncer=true; 
+            }, 6000);
+            $('.card').removeClass('hidden');
+            this.settingClick= new Audio();
+            this.settingClick.src = "sound/AdventurePanel_down.ogg";
+            this.settingClick.play();
+            this.settingClick2= new Audio();
+            this.settingClick2.src = "sound/crafting_create_card_start.ogg";
+            this.settingClick2.play();
+            $('.card').removeClass('match_card');
+        }.bind(this));
+
+        $('.close').click(function () {
+            $('.modal').css({display: 'none'});
+        });
+
+        $(window).click(function () {
+            if ($('.modal').css('display') === 'block') {
+                $('.modal').css({display: 'none'});
+            }
+        });
+    
+        $('#pop-out').on('click', function () {
+            this.controller.openModal(event.target);
+    
+        }.bind(this));
+        $('.setting').on('click', function (event) {
+            this.controller.openModal(event.target);
+            this.settingClick= new Audio();
+            this.settingClick.src = "sound/AdventurePanel_down.ogg";
+            this.settingClick.play();
+        }.bind(this));
+    
+        $('.sounds').on('click', this.controller.togglePlay.bind(this));
     }
 
-    this.display_stats= () => {
-        $('.games-played .value').text(this.model.games_played);
-        $('.attempts .value').text(this.model.attempt);
-        $('.points .value').text(this.model.game_points);
-        this.model.accuracy= (this.model.matches/this.model.attempt*100).toFixed(2);
-        if(this.model.accuracy !== "NaN") {
-            $('.accuracy .value').text(this.model.accuracy + ' %');
-        } else{$('.accuracy .value').text('0 %');}
+    
+    this.handleCardClicked= (event) => {
+        if($('.card_row').hasClass('ring')){
+            return; 
+        }
+        this.model.card_clicked(event.currentTarget);
+        this.view.display_stats();
+        this.settingClick= new Audio();
+        this.settingClick.src = "sound/class_tab_click.ogg";
+        this.settingClick.play();
     }
+
+    this.handleMouseEnter= (event) => {
+        if(!event.currentTarget.classList.contains("hover") && !event.currentTarget.hasAttribute("gotit")){
+            event.currentTarget.classList.add("hover"); 
+            this.settingClick= new Audio();
+            this.settingClick.volume = 0.4;
+            this.settingClick.src = "sound/collection_manager_card_remove_from_deck_instant.ogg";
+            this.settingClick.play();
+            setTimeout(()=>{event.currentTarget.classList.remove("hover")}, 1000); 
+        }
+    }
+
 
     this.reset_stats= () => {
         this.model.accuracy=0;
         this.model.matches=0;
         this.model.attempt=0;
         this.model.game_points=0;
-        this.display_stats();
+        this.view.display_stats();
         $('.card').removeAttr("gotit");
 
     }
