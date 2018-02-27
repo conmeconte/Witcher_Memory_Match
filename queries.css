@@ -180,7 +180,7 @@
         font-family:'IM Fell English SC';
         display: block;
         height: 30%;
-        margin-top: 2%;
+        margin-top: 3%;
         padding: 1vmin 0 0 0 ; 
         z-index:1; 
     }
@@ -471,7 +471,7 @@
         font-family:'IM Fell English SC';
         display: block;
         height: 40%;
-        margin-top: 3%;
+        margin-top: 0;
         padding: 4vmin 0 0 0 ; 
         color: white; 
     }
