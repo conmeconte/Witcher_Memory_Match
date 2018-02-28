@@ -24,7 +24,7 @@ body{
     height: 100vh;
     background-size: cover;
     position: relative;
-    overflow:hidden; 
+    overflow-y: scroll; 
 
 }
 .row {
