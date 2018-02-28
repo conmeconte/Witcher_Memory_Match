@@ -256,7 +256,17 @@ a:active {
     cursor: pointer;
 
 }
-.card.hover {
+/* .card.hover {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    border:2px solid rgba(0,160,80,0);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    -webkit-animation: cardBlink 2s ease-in-out infinite;
+            animation: cardBlink 2s ease-in-out infinite;
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate; 
+} */
+.card:hover{
     -webkit-transform: scale(1.2) rotate(360deg);
     border:2px solid rgba(0,160,80,0);
     -webkit-transition: all 0.5s ease-in-out 0s;

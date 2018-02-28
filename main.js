@@ -1,6 +1,20 @@
 
 $(document).ready(function() {
     shuffleCard2(frontCardArray2);
+    $(window).click(function () {
+        if ($('.modal').css('display') === 'block') {
+            $('.modal').css({display: 'none'});
+        }
+        if ($('#winModal').css('display') === 'block') {
+            $('.modal').css({display: 'none'});
+        }
+        if ($('#ruleModal').css('display') === 'block') {
+            $('.modal').css({display: 'none'});
+        }
+        if ($('#settingModal').css('display') === 'block') {
+            $('.modal').css({display: 'none'});
+        }
+    });
     checkSoundOption(); 
     $('.card').click(function () {
         if($('.row1').hasClass('ring')){
@@ -49,11 +63,7 @@ $(document).ready(function() {
     $('.close').click(function () {
         $('.modal').css({display: 'none'});
     });
-    $(window).click(function () {
-        if ($('.modal').css('display') === 'block') {
-            $('.modal').css({display: 'none'});
-        }
-    });
+
 
     $('#pop-out').on('click', function () {
         openModal(this);
