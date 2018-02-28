@@ -246,22 +246,14 @@
     #pop-out{
         right: 0; 
     }
-    #settingModal{
-        height: 75%;
-    }
+
     #settingModal a{
         width: 100%; 
     }
     .modal-content{
         top: 21%; 
     }
-    #rulesModal{
-        height: 60%; 
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-    }
+
     .ring{
         height: 25%; 
     }
@@ -368,9 +360,7 @@
         right: 1%; 
 
     }
-    #settingModal{
-        height: 75%;
-    }
+
     #settingModal a{
         width: 100%; 
     }
@@ -381,9 +371,7 @@
     .modal-content h4{
         font-size: 12px; 
     }
-    #rulesModal{
-        height: 60%; 
-    }
+
     .ring{
         height: 25%; 
         top: 25%; 
@@ -537,18 +525,6 @@
         height: 25%; 
     }
     
-    #rulesModal{
-        width: 80%; 
-    }
-    #settingModal{
-        left: 50%;
-        top: 50%; 
-        -webkit-transform: translate(50% 50%); 
-                transform: translate(50% 50%); 
-        width: 100%; 
-
-
-    }
     #settingModal>.modal-content{
         width: 60%; 
     }

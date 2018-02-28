@@ -39,25 +39,26 @@ function Controller(cardArray){
         $('.close').click(function () {
             $('.modal').css({display: 'none'});
         });
-
-        $(window).click(function () {
-            if ($('.modal').css('display') === 'block') {
+        $('body').click(function() {
+            if(event.target.className === "modal"){
                 $('.modal').css({display: 'none'});
             }
         });
-    
+
         $('#pop-out').on('click', function () {
-            this.controller.openModal(event.target);
+            this.openModal(event.target);
     
-        }.bind(this));
+            }
+        .bind(this));
+
         $('.setting').on('click', function (event) {
-            this.controller.openModal(event.target);
+            this.openModal(event.target);
             this.settingClick= new Audio();
             this.settingClick.src = "sound/AdventurePanel_down.ogg";
             this.settingClick.play();
         }.bind(this));
     
-        $('.sounds').on('click', this.controller.togglePlay.bind(this));
+        $('.sounds').on('click', this.togglePlay.bind(this));
     }
 
     
