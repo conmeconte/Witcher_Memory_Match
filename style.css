@@ -1,5 +1,6 @@
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 html {
     margin: 0;
@@ -7,6 +8,11 @@ html {
     position: relative;
     font-size: 1em;
     font-family:'IM Fell English SC';
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 
 }
 
@@ -14,10 +20,11 @@ body{
     background-color: #0a2d6d;
     background-image: url("img/wallpaper_gwent_the_witcher_card_game_01_1920x1080.jpg");
     background-repeat: no-repeat;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     background-size: cover;
     position: relative;
+    overflow-y: scroll; 
 
 }
 .row {
@@ -39,30 +46,41 @@ header .row{
     height: 100%;
 }
 #main_title{
+    position: relative; 
+    display: inline-block; 
     height: 100%;
-    width: 57%;
-    margin-left: 13%;
+    width: 35%;
+    margin-left: 20%;
     background-color: rgba(255,255,255,0.7);
-    box-shadow: inset 0px 0px 20px 15px black;
+    -webkit-box-shadow: inset 0px 0px 20px 15px black;
+            box-shadow: inset 0px 0px 20px 15px black;
 }
-#title_frame{
+#main_title>img{
+    width: 100%;
+    height: 100%; 
+}
+#main_title::after{
+    background-image: url('img/frame.png');
+    background-size: 101% 110%; 
+    content: " ";
     position: absolute;
-    width: 59%;
-    height: 127%;
-    left: 12%;
-    top: -10%;
-    margin: 0;
+    top: -5%;
+    left: -3%;
+    height: 110%;
+    width: 105%; 
 }
+
 a:link,
 a:visited {
     color: #e67e22;
     text-decoration: none;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
     background-color: rgba(255,255,255,1);
     border-radius: 5%;
-    padding: 1em;
+    padding: 1% 2%;
     font-family:'IM Fell English SC';
-    font-size: 1em;
+    font-size: 1.5em;
     margin-left: 5%;
 
 }
@@ -71,7 +89,8 @@ a:hover,
 a:active {
     color: #555;
     text-decoration: none;
-    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
     background-color: rgba(75, 252, 143, 0.932); 
 }
 .top {
@@ -87,7 +106,9 @@ a:active {
 #logo {
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 2% 2% #250f22;
+    -webkit-box-shadow: 0px 0 10px 7px #1b1616;
+            box-shadow: 0px 0 10px 7px #1b1616;
+
 
 }
 #pop-out{
@@ -112,15 +133,26 @@ a:active {
     background: rgba(241, 110, 206, 0.43);
     width: auto;
     font-size: 100%;
-    padding: 3% 0.5%;
+    padding: 3% 0.5% 0 0.5%;
     position: relative;
     margin-left: 3%;
     text-align: center;
     font-family:'IM Fell English SC';
     top: 5%;
     height: 85%;
-    color: white; 
+    color: white;
+}
 
+
+.status::after{
+    background-image: url('img/frame2.png');
+    background-size: 101% 100%; 
+    content: " ";
+    position: absolute;
+    top: -3%;
+    left: -15%;
+    height: 106%;
+    width: 120%; 
 }
 
 .status>h2{
@@ -152,13 +184,16 @@ a:active {
 }
 
 .game-area{
-    background: rgba(255, 255, 255, 0.7);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.35)), to(rgba(72, 57, 57, 0.22))), url('img/board.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(72, 57, 57, 0.22)), url('img/board.jpg');
+    background-size: cover; 
     margin-left: 5%;
     position: relative;
     height: 90%;
     padding: 0;
     width: 75%;
-    box-shadow: 0px 2px 20px 12px rgb(145, 112, 95), 1px 0px 8px 8px rgb(144, 111, 92);
+    -webkit-box-shadow: 0px 2px 20px 12px rgb(145, 112, 95), 1px 0px 8px 8px rgb(144, 111, 92);
+            box-shadow: 0px 2px 20px 12px rgb(145, 112, 95), 1px 0px 8px 8px rgb(144, 111, 92);
     margin-top: 1%;
 }
 
@@ -168,23 +203,35 @@ a:active {
     left: 0;
     height: 100%;
     width: 100%;
-    box-shadow: inset 0 0 0px 0px #22303e;
+    -webkit-box-shadow: inset 0 0 0px 0px #22303e;
+            box-shadow: inset 0 0 0px 0px #22303e;
 }
+
 #board{
     opacity: 0.6;
 }
 
-.row1{
+
+
+.card_row{
     display:block;
     position: relative;
     width: 80%;
     height: 70vmin;
     font-size: 0;
-    box-sizing: border-box;
+    -webkit-transform: translate3d(0,0,200px);
+            transform: translate3d(0,0,200px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: auto; 
     margin-top:1vmin; 
 }
 
+.card_row.ring>.card:hover{
+    /* cursor: none;  */
+    -webkit-animation:none;
+            animation:none; 
+}
 
 .card {
     display: inline-block;
@@ -196,45 +243,80 @@ a:active {
     border-radius: 10%;
     z-index: 3;
     font-size: 0;
-    box-sizing: border-box;
-    box-shadow: 0 0 10px 2px white;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 0 0 10px 2px white;
+            box-shadow: 0 0 10px 2px white;
+    cursor: pointer;
+
 }
-.card:hover,
-.card:active {
+/* .card.hover {
     -webkit-transform: scale(1.2) rotate(360deg);
     border:2px solid rgba(0,160,80,0);
-    transition: all 0.3s ease-in-out 0s;
-    animation: cardBlink 3s ease-in-out infinite;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    -webkit-animation: cardBlink 2s ease-in-out infinite;
+            animation: cardBlink 2s ease-in-out infinite;
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate; 
+} */
+.card:hover{
+    -webkit-transform: scale(1.2) rotate(360deg);
+    border:2px solid rgba(0,160,80,0);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+    -webkit-animation: cardBlink 2s ease-in-out infinite;
+            animation: cardBlink 2s ease-in-out infinite;
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate; 
+}
+
+.card[gotit=true]:hover,
+.card[gotit=true]:active{
+    cursor: default; 
+    -webkit-transform:none;
+            transform:none; 
+    -webkit-animation:none; 
+            animation:none; 
 }
 
 @-webkit-keyframes cardBlink {
-    from {     box-shadow: 0 0 20px 7px #feff7e;}
-    to   {     box-shadow: 0 0 2px 1px #ffd69a;}
+    from {     -webkit-box-shadow: 0 0 20px 7px #feff7e;     box-shadow: 0 0 20px 7px #feff7e;}
+    to   {     -webkit-box-shadow: 0 0 2px 1px #ffd69a;     box-shadow: 0 0 2px 1px #ffd69a;}
 }
 
 
 
 @-webkit-keyframes cardBlink2 {
-    from {     box-shadow: 0 0 30px 15px #6853ff;}
-    to   {     box-shadow: 0 0 2px 1px #593bff;}
+    from {     -webkit-box-shadow: 0 0 30px 15px #6853ff;     box-shadow: 0 0 30px 15px #6853ff;}
+    to   {     -webkit-box-shadow: 0 0 2px 1px #593bff;     box-shadow: 0 0 2px 1px #593bff;}
 }
-
+    
+.back>img{
+    background: url('./img/back.jpg') no-repeat;
+    background-size: 100% 100%; 
+}
 
 .hidden .back {
     visibility: hidden;
+    background-size: 100% 100%;
 
 }
 
 
 .match_card{
-    animation: cardBlink3 3s ease-in-out 1;
-    box-shadow: 0 0 20px 10px #ff191e;
-
-
+    -webkit-animation: cardBlink3 2s ease-in-out 2;
+            animation: cardBlink3 2s ease-in-out 2;
+            -webkit-animation-direction: alternate;
+                    animation-direction: alternate; 
+    -webkit-box-shadow: 0 0 16px 4px #da2619;
+            box-shadow: 0 0 16px 4px #da2619;
 }
+
+
 @-webkit-keyframes cardBlink3 {
-    from {     box-shadow: 0 0 30px 15px #ff191e;}
-    to   {     box-shadow: 0 0 2px 1px #ff1b30;}
+    from {     -webkit-box-shadow: 0 0 20px 7px #ff191e;     box-shadow: 0 0 15px 15px #d43912d7;}
+    to   {     -webkit-box-shadow: 0 0 2px 1px #fd9f24;     box-shadow: 0 0 2px 1px #ff821b;}
 }
 
 /*-----------------------------MODAL-------------------------------*/
@@ -255,31 +337,8 @@ a:active {
 
 
 }
-#rulesModal {
-    left: 50vmax;
-    top: 25vmin;
-    width: 50%; /* Full width */
-    height: 50%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0); /* Black w/ opacity */
-    font-family:'IM Fell English SC';
 
 
-}
-#settingModal {
-    left: 55%;
-    top: 30%;
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0);
-    transform: translate(-50%,-50%);
-    font-family:'IM Fell English SC';
-
-
-}
 /* Modal Content/Box */
 .modal-content {
     background-color: rgba(0,0,0,0.7);
@@ -294,34 +353,30 @@ a:active {
 
 }
 
-#rulesModal .modal-content{
-    background-color: rgba(0,0,0,0.7);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    padding-top:5px;
-    border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
-    z-index: 10;
-    text-align: center;
-    color: white;
-    font-family:'IM Fell English SC';
 
-
-}
 
 #settingModal .modal-content{
     background-color: rgba(0,0,0,0.7);
-    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     padding-top:5px;
     border: 1px solid #888;
-    width: 30%;
+    width: 60%;
     z-index: 10;
     text-align: center;
     color: white;
     font-family:'IM Fell English SC';
-
-
+    margin: 0 auto; 
+    top: 10%; 
+}
+.modal-content>a{
+    margin:0; 
+    margin-top: 10px;
+    width: 60%; 
+    border-radius: 0; 
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 /* The Close Button */
 .close {
@@ -346,10 +401,12 @@ a:active {
 
 /*-----------------test------*/
 .spinner{
-    animation: spin 2s 2 linear;
+    -webkit-animation: spin 2s 2 linear;
+            animation: spin 2s 2 linear;
 }
 .spinner2{
-    animation: spin2 1s 1 linear;
+    -webkit-animation: spin2 1s 1 linear;
+            animation: spin2 1s 1 linear;
 }
 
 
@@ -391,51 +448,51 @@ a:active {
     top: 20%;
 }
 
-.ring > .one {
+.ring > .num1 {
     -webkit-transform: translateZ(20vmax);
 }
 
-.ring > .two {
+.ring > .num2 {
     -webkit-transform: rotateY(20deg) translateZ(20vmax);
 }
 
-.ring > .three {
+.ring > .num3 {
     -webkit-transform: rotateY(40deg) translateZ(20vmax);
 }
 
-.ring > .four {
+.ring > .num4 {
     -webkit-transform: rotateY(60deg) translateZ(20vmax);
 }
 
-.ring > .five {
+.ring > .num5 {
     -webkit-transform: rotateY(80deg) translateZ(20vmax);
 }
 
-.ring > .six {
+.ring > .num6 {
     -webkit-transform: rotateY(100deg) translateZ(20vmax);
-}.ring > .seven {
+}.ring > .num7 {
     -webkit-transform: rotateY(120deg) translateZ(20vmax);
-}.ring > .eight {
+}.ring > .num8 {
     -webkit-transform: rotateY(140deg) translateZ(20vmax);
-}.ring > .nine {
+}.ring > .num9 {
     -webkit-transform: rotateY(160deg) translateZ(20vmax);
-}.ring > .ten {
+}.ring > .num10 {
     -webkit-transform: rotateY(180deg) translateZ(20vmax);
-}.ring > .eleven {
+}.ring > .num11 {
     -webkit-transform: rotateY(200deg) translateZ(20vmax);
-}.ring > .twelve {
+}.ring > .num12 {
     -webkit-transform: rotateY(220deg) translateZ(20vmax);
-}.ring > .thirteen {
+}.ring > .num13 {
     -webkit-transform: rotateY(240deg) translateZ(20vmax);
-}.ring > .fourteen {
+}.ring > .num14 {
     -webkit-transform: rotateY(260deg) translateZ(20vmax);
-}.ring > .fifteen {
+}.ring > .num16 {
     -webkit-transform: rotateY(280deg) translateZ(20vmax);
-}.ring > .sixteen {
+}.ring > .num17 {
     -webkit-transform: rotateY(300deg) translateZ(20vmax);
-}.ring > .seventeen {
+}.ring > .num18 {
     -webkit-transform: rotateY(320deg) translateZ(20vmax);
-}.ring > .eighteen {
+}.ring > .num19 {
     -webkit-transform: rotateY(340deg) translateZ(20vmax);
 }
 
